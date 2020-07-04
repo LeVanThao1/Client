@@ -67,17 +67,17 @@ async function loadCart() {
         $('.header__cart-notice').html(`${length}`);
 
         $('.header__cart-view-cart').click(() => {
-            redirect('http://localhost:3000/cart.html')
+            redirect('cart.html')
         })
         return;
     }
     else {
         $('.header__cart-notice').html(`${length}`);
         $('.header__cart-list ').html(`<ul class="header__cart-list-item"></ul>
-        <a href="http://localhost:3000/cart.html" class="header__cart-view-cart btn btn--primary">Xem giỏ hàng</a>`)
+        <a href="https://your-lap.herokuapp.com/cart.html" class="header__cart-view-cart btn btn--primary">Xem giỏ hàng</a>`)
 
         $('.header__cart-view-cart').click(() => {
-            redirect('http://localhost:3000/cart.html')
+            redirect('cart.html')
         })
     $('.fa-shopping-cart').click(() => {
         if(userId) {

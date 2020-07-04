@@ -1,4 +1,4 @@
-const LOCAL_DOMAIN = 'http://localhost:3000';
+const LOCAL_DOMAIN = 'https://your-lap.herokuapp.com/';
 
 function redirect(path) {
     if (!path) {
