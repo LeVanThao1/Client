@@ -21,7 +21,7 @@ async function handlePayment() {
             recipientAddress: `${city}, ${district}, ${warn}, ${street}`,
             products
         }
-        axios.post(`http://localhost:3001/api/v1/order?token=${token}`, paymentAddress).then((res) => {
+        axios.post(`https://server-yourlap.herokuapp.com/api/v1/order?token=${token}`, paymentAddress).then((res) => {
             if(res.data.createdOrder ) {
                 alert('thanh cong');
                 localStorage.removeItem('products');

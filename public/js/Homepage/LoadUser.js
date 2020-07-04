@@ -17,7 +17,7 @@ async function loadUser() {
     //     loadCart();
     //     return;
     // }
-    const dataCT = await axios.get(`http://localhost:3001/api/v1/users/${userId}`);
+    const dataCT = await axios.get(`https://server-yourlap.herokuapp.com/api/v1/users/${userId}`);
     console.log(dataCT);
     if(!token || dataCT.status !== 200 || !userId) {
         $('.user').append(`<li class="header__navbar-item header__navbar-item--bold header__navbar-item--separate Register" >Đăng ký</li>

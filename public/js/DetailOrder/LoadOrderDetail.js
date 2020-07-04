@@ -4,7 +4,7 @@ $(document).ready(function () {
 
 async function loadOrderDetail() {
     const id = window.location.search.slice(4);
-    const data = await axios.get(`http://localhost:3001/api/v1/orderdetail/${id}`);
+    const data = await axios.get(`https://server-yourlap.herokuapp.com/api/v1/orderdetail/${id}`);
     console.log(data)
     const orderDetail = data.data.orderDetail;
     $('.info_bill').html(`
@@ -35,7 +35,7 @@ async function loadOrderDetail() {
     `)
     $('.cart_content').html('')
     orderDetail.products.forEach(pr => {
-        axios.get(`http://localhost:3001/api/v1/products/${pr.productId}`).then((res) => {
+        axios.get(`https://server-yourlap.herokuapp.com/api/v1/products/${pr.productId}`).then((res) => {
             console.log(res);
             const product = res.data.product;
             $('.cart_content').append(`

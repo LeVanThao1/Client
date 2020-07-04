@@ -63,7 +63,7 @@ async function loadCartProduct2(pd) {
             return;
         }
         else {
-            const result = axios.put(`http://localhost:3001/api/v1/cart/change`, {
+            const result = axios.put(`https://server-yourlap.herokuapp.com/api/v1/cart/change`, {
             check: "true",
             userId: userId,
             productId: pd.productId
@@ -80,7 +80,7 @@ async function loadCartProduct2(pd) {
     $(`.decrease-${pd.productId}`).click(() => {
         console.log(+$(`.quantity-${pd.productId}`).val(), +$(`.quantity-${pd.productId}`).val() === 1);
         if(+$(`.quantity-${pd.productId}`).val() === 1)  {
-            const result = axios.put('http://localhost:3001/api/v1/cart/deletesp', {
+            const result = axios.put('https://server-yourlap.herokuapp.com/api/v1/cart/deletesp', {
                     userId: userId,
                     productId: pd.productId
             }).then((res) => {
@@ -92,7 +92,7 @@ async function loadCartProduct2(pd) {
             return;
         }
         else {
-            const result = axios.put(`http://localhost:3001/api/v1/cart/change`, {
+            const result = axios.put(`https://server-yourlap.herokuapp.com/api/v1/cart/change`, {
             check: "false",
             userId: userId,
             productId: pd.productId
@@ -108,7 +108,7 @@ async function loadCartProduct2(pd) {
         }
     });
     $(`.del-${pd.productId}`).click(() => {
-        const result = axios.put('http://localhost:3001/api/v1/cart/deletesp', {
+        const result = axios.put('https://server-yourlap.herokuapp.com/api/v1/cart/deletesp', {
                     userId: userId,
                     productId: pd.productId
         }).then((res) => {
@@ -129,7 +129,7 @@ async function loadCartProduct2(pd) {
 }
 async function loadCartProduct() {
     const userId = localStorage.getItem('userId');
-    const cart = await axios.get(`http://localhost:3001/api/v1/cart/${userId}`);
+    const cart = await axios.get(`https://server-yourlap.herokuapp.com/api/v1/cart/${userId}`);
     const getCart = cart.data.cart.cart;
     total = 0
     console.log(getCart);
@@ -140,7 +140,7 @@ async function loadCartProduct() {
     }
     const a = getCart.map((pd,cb) => {
         console.log(pd)
-         axios.get(`http://localhost:3001/api/v1/products/${pd.productId}`).then(function (response) {
+         axios.get(`https://server-yourlap.herokuapp.com/api/v1/products/${pd.productId}`).then(function (response) {
             const product = {
                 productId: pd.productId,
                 amountProduct: response.data.product.amount,

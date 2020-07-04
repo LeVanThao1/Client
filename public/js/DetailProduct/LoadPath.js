@@ -3,12 +3,12 @@ const cartId = localStorage.getItem('cartId');
 // const userId = localStorage.getItem('userId');
 
 async function getCart() {
-    const cart = await axios.get(`http://localhost:3001/api/v1/cart/${cartId}`);
+    const cart = await axios.get(`https://server-yourlap.herokuapp.com/api/v1/cart/${cartId}`);
     return cart;
 }
 
 async function getProduct(id = productId) {
-    const product = await axios.get(`http://localhost:3001/api/v1/products/${productId}`);
+    const product = await axios.get(`https://server-yourlap.herokuapp.com/api/v1/products/${productId}`);
     return product;
 }
 $(document).ready(function(){
@@ -114,7 +114,7 @@ async function loadProduct() {
             redirect('loginUser.html')
             return;
         }
-        const addCart = axios.put('http://localhost:3001/api/v1/cart/addsp', {
+        const addCart = axios.put('https://server-yourlap.herokuapp.com/api/v1/cart/addsp', {
             userId: userId,
             productId: product.data.product._id,
             price: +product.data.product.price,
@@ -159,7 +159,7 @@ async function loadProduct() {
         const token = localStorage.getItem('token');
         const userId = localStorage.getItem('userId');
         localStorage.setItem('productId' , product.data.product._id);
-        // const reponse = axios.get(`http://localhost:3001/api/v1/auth?token=${token}`).then((data) =>{
+        // const reponse = axios.get(`https://server-yourlap.herokuapp.com/api/v1/auth?token=${token}`).then((data) =>{
         //     console.log(data)
             if(!token || !userId) {
                 localStorage.setItem('path', `cart.html`)
@@ -167,7 +167,7 @@ async function loadProduct() {
             }
             else {
                 // localStorage.setItem('pathprev', `${window.location.pathname.slice(1)+ window.location.search}`)
-                axios.put('http://localhost:3001/api/v1/cart/addsp', {
+                axios.put('https://server-yourlap.herokuapp.com/api/v1/cart/addsp', {
                     userId: userId,
                     productId: product.data.product._id,
                     price: +product.data.product.price,

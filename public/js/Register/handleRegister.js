@@ -6,7 +6,7 @@ async function register() {
     const email = $('input[name="user_email"]').val();
     const password = $('input[name="user_password"]').val();
     const fullname = $('input[name="fullname"]').val()
-    const result = await axios.post('http://localhost:3001/api/v1/users', {
+    const result = await axios.post('https://server-yourlap.herokuapp.com/api/v1/users', {
         email: email,
         password: password,
         fullname: fullname

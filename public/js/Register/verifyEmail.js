@@ -9,7 +9,7 @@
             $('input[name="vetify_email"]').focus();
             return;
         }
-        axios.put('http://localhost:3001/api/v1/verifyemail', {
+        axios.put('https://server-yourlap.herokuapp.com/api/v1/verifyemail', {
             email,
             code
         }).then((res) => {
@@ -30,7 +30,7 @@
     $('#send').click((e) => {
         const email = localStorage.getItem('email');
         e.preventDefault();
-        axios.put('http://localhost:3001/api/v1/sendcode', {
+        axios.put('https://server-yourlap.herokuapp.com/api/v1/sendcode', {
             email
         }).then(res => {
             console.log(res)

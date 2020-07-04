@@ -3,7 +3,7 @@ $(document).ready(function(){
 })
 
 async function loadUsers() {
-    const getDataProdcts = await axios.get(`http://localhost:3001/api/v1/products`);
+    const getDataProdcts = await axios.get(`https://server-yourlap.herokuapp.com/api/v1/products`);
     const products = getDataProdcts.data.listProduct;
     console.log(products);
     products.forEach(product => {

@@ -7,7 +7,7 @@ $('.update').click(()=> {
     const gender = document.querySelector('#male').checked === true? "Male": "Female";
     const dateOfBirth = new Date($('#user_date').val());
     const address = $('#user_address').val();
-    axios.put(`http://localhost:3001/api/v1/users/${userId}`, {
+    axios.put(`https://server-yourlap.herokuapp.com/api/v1/users/${userId}`, {
         fullname,
         phoneNumber,
         gender,
@@ -18,7 +18,7 @@ $('.update').click(()=> {
             if(check) {
                 const oldPw = $('#old_password').val();
                 const newPw = $('#password').val();
-                axios.put(`http://localhost:3001/api/v1/changepw/${userId}`, {
+                axios.put(`https://server-yourlap.herokuapp.com/api/v1/changepw/${userId}`, {
                     oldPw,
                     newPw
                 }).then((res) => {

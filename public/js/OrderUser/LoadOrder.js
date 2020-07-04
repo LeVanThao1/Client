@@ -4,7 +4,7 @@ $(document).ready(function () {
 
 async function loadOrderUser() {
     const userId = localStorage.getItem('userId');
-    const data = await axios.get(`http://localhost:3001/api/v1/order/user/${userId}`);
+    const data = await axios.get(`https://server-yourlap.herokuapp.com/api/v1/order/user/${userId}`);
     const orders = data.data.order;
     if(orders.length === 0) {
         $('tbody').html('<tr><td col-span="9" style="font-size: 18px; color: gray; text-align:center; background-color: #f5f5f5;">Hiện tại chưa có đơn hàng nào cả </td></tr>')

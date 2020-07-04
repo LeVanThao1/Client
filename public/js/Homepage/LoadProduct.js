@@ -3,8 +3,8 @@ $(document).ready(function(){
     loadProduct();
 });
 
-async function loadProduct(url="http://localhost:3001/api/v1/products?page=1&limit=4") {
-    // const category = document.querySelector('.category-list');http://localhost:3001/api/v1/products
+async function loadProduct(url="https://server-yourlap.herokuapp.com/api/v1/products?page=1&limit=4") {
+    // const category = document.querySelector('.category-list');https://server-yourlap.herokuapp.com/api/v1/products
     console.log(`qqeeqw`)
     $('.allProduct').html('');
     const dataCT = await axios.get(url);

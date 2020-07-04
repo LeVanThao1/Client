@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 async function loadCategory() {
     // const category = document.querySelector('.category-list');
-    const dataCT = await axios.get(`http://localhost:3001/api/v1/type\_product`);
+    const dataCT = await axios.get(`https://server-yourlap.herokuapp.com/api/v1/type\_product`);
     console.log(dataCT);
     dataCT.data.listPT.forEach(ct => {
         $('.category-list').append(
@@ -17,8 +17,8 @@ async function loadCategory() {
         $(`.ct-${ct._id}`).click(() => {
             localStorage.setItem('ct',`${ct._id}`);
             redirect('homepage.html')
-            // loadProduct(`http://localhost:3001/api/v1/products/type/${ct._id}`)
-            // loadPagination(`http://localhost:3001/api/v1/products/type/${ct._id}?`)
+            // loadProduct(`https://server-yourlap.herokuapp.com/api/v1/products/type/${ct._id}`)
+            // loadPagination(`https://server-yourlap.herokuapp.com/api/v1/products/type/${ct._id}?`)
         })
     });
 }

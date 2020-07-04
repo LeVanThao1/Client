@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 async function loadCategory() {
     // const category = document.querySelector('.category-list');
-    const dataCT = await axios.get(`http://localhost:3001/api/v1/type\_product`);
+    const dataCT = await axios.get(`https://server-yourlap.herokuapp.com/api/v1/type\_product`);
     console.log(dataCT);
     const cate = localStorage.getItem('ct');
     dataCT.data.listPT.forEach(ct => {
@@ -16,7 +16,7 @@ async function loadCategory() {
             </li>`
         )
         if(cate) {
-            axios.get(`http://localhost:3001/api/v1/products/type/${cate}?page=1&limit=4`).then((respon) => {
+            axios.get(`https://server-yourlap.herokuapp.com/api/v1/products/type/${cate}?page=1&limit=4`).then((respon) => {
                 const products = respon.data.data;
                 console.log(products);
                 $('.allProduct').html('');
@@ -71,8 +71,8 @@ async function loadCategory() {
                 })
                 
             })
-            // loadProduct(`http://localhost:3001/api/v1/products/type/${ct._id}`)
-            loadPagination(`http://localhost:3001/api/v1/products/type/${cate}?`);
+            // loadProduct(`https://server-yourlap.herokuapp.com/api/v1/products/type/${ct._id}`)
+            loadPagination(`https://server-yourlap.herokuapp.com/api/v1/products/type/${cate}?`);
             localStorage.removeItem('ct')
         }
         $(`.ct-${ct._id}`).click(() => {
@@ -80,7 +80,7 @@ async function loadCategory() {
                 $(`.ct-${ct2._id}`).removeClass("category-item--active");
             })
             $(`.ct-${ct._id}`).addClass("category-item--active");
-            axios.get(`http://localhost:3001/api/v1/products/type/${ct._id}?page=1&limit=4`).then((respon) => {
+            axios.get(`https://server-yourlap.herokuapp.com/api/v1/products/type/${ct._id}?page=1&limit=4`).then((respon) => {
                 const products = respon.data.data;
                 console.log(products);
                 $('.allProduct').html('');
@@ -135,8 +135,8 @@ async function loadCategory() {
                 })
                 
             })
-            // loadProduct(`http://localhost:3001/api/v1/products/type/${ct._id}`)
-            loadPagination(`http://localhost:3001/api/v1/products/type/${ct._id}?`)
+            // loadProduct(`https://server-yourlap.herokuapp.com/api/v1/products/type/${ct._id}`)
+            loadPagination(`https://server-yourlap.herokuapp.com/api/v1/products/type/${ct._id}?`)
         })
     });
 }

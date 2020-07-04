@@ -1,5 +1,5 @@
 let getAllProduct;
-// const url = 'http://localhost:3001/api/v1/products';
+// const url = 'https://server-yourlap.herokuapp.com/api/v1/products';
 let page;
 async function getProducts(url) {
     getAllProduct = await axios.get(url);
@@ -7,7 +7,7 @@ async function getProducts(url) {
 }
 $(document).ready(function () {
     // getProducts();
-    loadPagination('http://localhost:3001/api/v1/products?');
+    loadPagination('https://server-yourlap.herokuapp.com/api/v1/products?');
 })
 const limit = 4;
 let currentPage = 1;

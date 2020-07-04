@@ -4,7 +4,7 @@ $(document).ready(() => {
 
 async function loadInfo() {
     const userId = localStorage.getItem('userId');
-    const data = await axios.get(`http://localhost:3001/api/v1/users/${userId}`);
+    const data = await axios.get(`https://server-yourlap.herokuapp.com/api/v1/users/${userId}`);
     if(!data.data.user) {
         redirect('loginUser.html');
         return;

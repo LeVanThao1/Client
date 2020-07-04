@@ -3,7 +3,7 @@ $(document).ready(function(){
 })
 
 async function loadUsers() {
-    const getDataUsers = await axios.get(`http://localhost:3001/api/v1/users`);
+    const getDataUsers = await axios.get(`https://server-yourlap.herokuapp.com/api/v1/users`);
     const users = getDataUsers.data.listUser;
     console.log(users);
     users.forEach(user => {

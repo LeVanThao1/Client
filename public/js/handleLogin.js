@@ -1,7 +1,7 @@
-const API_URL = 'http://localhost:3001';
+const API_URL = 'https://server-yourlap.herokuapp.com';
 const token = localStorage.getItem('token');
 const userId = localStorage.getItem('userId');
-const dataCT = axios.get(`http://localhost:3001/api/v1/users/${userId}`);
+const dataCT = axios.get(`https://server-yourlap.herokuapp.com/api/v1/users/${userId}`);
 if(token && userId || dataCT.status === 200) {
 	redirect('homepage.html');
 }
@@ -10,6 +10,9 @@ $('.Login').click(function () {
 });
 $('.auth-form__help-forgot').click(function () {
 	redirect('vetifyEmail.html');
+});
+$('.btn auth-form__controls-back')click(function () {
+	redirect('homepage.html');
 });
 
 

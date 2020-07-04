@@ -33,7 +33,7 @@ async function loadCart2(pd) {
         `)
         $(`.del-${pd.productId}`).click(()=> {
             const userId = localStorage.getItem('userId')
-            const result = axios.put('http://localhost:3001/api/v1/cart/deletesp', {
+            const result = axios.put('https://server-yourlap.herokuapp.com/api/v1/cart/deletesp', {
                     userId: userId,
                     productId: pd.productId
             }).then((res) => {
@@ -47,7 +47,7 @@ async function loadCart2(pd) {
 async function loadCart() {
     const userId = localStorage.getItem('userId');
     $('.header__cart-list-item').html('');
-    const cart = await axios.get(`http://localhost:3001/api/v1/cart/${userId}`);
+    const cart = await axios.get(`https://server-yourlap.herokuapp.com/api/v1/cart/${userId}`);
     if(!cart.data.cart) {
         $('.header__cart-list').html(
             `<img src="../assets/img/noCart.png" alt="No-cart" class="header__cart-no-cart-img">
@@ -89,7 +89,7 @@ async function loadCart() {
     console.log(getCart);
     const a = getCart.map((pd,cb) => {
         console.log(pd)
-         axios.get(`http://localhost:3001/api/v1/products/${pd.productId}`).then(function (response) {
+         axios.get(`https://server-yourlap.herokuapp.com/api/v1/products/${pd.productId}`).then(function (response) {
              console.log(response)
             const product = {
                 productId: pd.productId,
