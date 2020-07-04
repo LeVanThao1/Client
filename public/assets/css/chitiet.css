@@ -1,0 +1,243 @@
+/* -----------------------------------CSS cho phần chi tiết sản phẩm --------------------------*/
+/* ----------------------Css home-path */
+
+.home-product-detail {
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+.home-path {
+    padding: 8px 0;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.home-path__list {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.home-path__item {
+    margin: 0 0 0 8px;
+}
+
+.home-path__link {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.home-path__link:hover {
+    color: var(--primary-color);
+}
+
+.home-path__icon {
+    margin: 0 4px;
+}
+ul.hom-page__list>li.home-path__item:first-child >a.home-page__link>i.home-path__icon::before {
+    visibility: hidden;
+    content: "";
+}
+
+
+
+/* #al {
+    display: none;
+} */
+
+/* Css product-detail---------------- */
+.detail-product {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: var(--white-color);
+    box-sizing: border-box;
+    padding: 20px;
+}
+.detail-product__img {
+    width: 450px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    object-fit: contain;
+    /* object-position: ; */
+}
+.info-product {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.info-product__heading {
+    font-size: 2.8rem;
+    margin: 8px 0;
+    line-height: 3rem;
+    color: var(--text-color);
+}
+.info-product__price {
+    
+}
+.info-product__price--old {
+    margin-left: 0;
+    font-size: 2.2rem;
+}
+.info-product__price--current {
+    font-size: 2.2rem;
+}
+.info-product__summary {
+    padding: 8px 0 0 0;
+}
+.item {
+    display: block;
+    font-size: 1.4rem;
+    margin: 8px 0;
+}
+.info-product__icon {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+.info-product__guarantee {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    /* text-align: center; */
+}
+
+.info-product__quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-text {
+    margin-right: 12px;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.quantity-show {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.quantity-show__control {
+    display: flex;
+}
+
+.quantity-btn {
+    outline: none;
+    cursor: pointer;
+    width: 32px;
+    font-size: 1.8rem;
+    font-weight: 300;
+    border: 1px solid rgba(0,0,0,.09);
+    background-color: transparent;
+}
+
+.quantity-icon {
+    font-size: 1rem;
+    text-align: center;
+    color: #555;
+}
+.quantity-input {
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-align: center;
+    border-right: none;
+    border-left: none;
+    cursor: text;
+    width: 48px;
+    height: 32px;
+    border: 1px solid rgba(0,0,0,.09);
+}
+
+.quantity-available {
+    padding-left: 8px;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.info-product__buy {
+    display: flex;
+    margin: 12px 0;
+    /* justify-content: space-evenly; */
+}
+
+.info-product__add--cart {
+    margin-right: 18px;
+    min-width: 158px;
+    height: 48px;
+    color: var(--primary-color);
+    background-color: #ffffff1a;
+    box-sizing: border-box;
+    border: 1px solid var(--primary-color);
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+.info-product__add--cart:hover {
+    background-color: #ff57221a;
+}
+
+.info-product__icon {
+    margin: 0 6px 0 0;
+    font-size: 1.8rem;
+}
+
+.info-prodcut__buy {
+    min-width: 186px;
+    font-size: 1.6rem;
+    font-weight: 300;
+    height: 48px;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.info-prodcut__buy:hover {
+    background-color:#e63b3b;
+}
+
+/* Đánh giá sản phẩm */
+.product-comment {
+    padding: 8px 0 30px 0;
+    background-color: transparent;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.product-comment__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.06);
+    padding: 8px 0;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.product-comment__name {
+    margin: 8px 0;
+}
+.product-comment__name span {
+    margin-right: 6px;
+    padding-left: 14px;
+}
+
+.product-comment__btn {
+    background-color: var(--primary-color);
+    margin-right: 142px;
+    color: var(--white-color);
+}
+
+.product-comment__btn:hover {
+    background-color: #e63b3b;
+}
+.product-comment__form {
+    margin-top: 12px;
+}
+
+.product-comment__text {
+    width: 100%;
+    font-size: 1.3rem;
+    outline: none;
+    border-radius: 2px;
+}

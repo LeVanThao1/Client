@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourLap Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/loginandregister.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
+    <!-- <script>
+        async function checkToken() {
+            const token = localStorage.getItem('token')
+            const reponse = await axios.get(`http://localhost:3001/api/v1/auth?token=${token}`);
+            if(!reponse.data.user) {
+                redirect('loginandregiter.html')
+            }
+            console.log(reponse)
+        }
+    </script> -->
+</head>
+
+<body>
+    <!-- BEM - block elements modifier -->
+    <div class="modal">
+        <div class="modal__overlay">
+
+        </div>
+
+        <div class="modal__body">
+                <!-- Register form -->
+            <div class="auth-form" id="register">
+                <div class="auth-form__container">
+
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Đăng ký</h3>
+                        <a class="none_decoration" href="./loginUser.html"><span class="auth-form_switch-btn" id="pass-to-login">Đăng nhập</span></a>
+                    </div>
+
+                    <form class="auth-form__form" id="form1">
+                        <div class="auth-form__group">
+                            <input id="user_mail" type="email" name="user_email" class="auth-form__input" placeholder="Nhập email của bạn" required>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                        <div class="auth-form__group">
+                            <input id="fullname" type="text" name="fullname" class="auth-form__input" placeholder="Nhập tên đầy đủ" required>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                        <div class="auth-form__group">
+                            <input id="user_pass" type="password" name="user_password" class="auth-form__input" placeholder="Nhập mật khẩu của bạn" required>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                        <div class="auth-form__group">
+                            <input id="user_confirmpass" type="password" name="confirm_password" class="auth-form__input" placeholder="Nhập lại mật khẩu" required>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                        
+                    </form>
+
+                    <div class="auth-form__aside">
+                        <p class="auth-form__policy-text">
+                            Bằng việc đăng ký, bạn đã đồng ý với chúng tôi về
+                            <a href="#" class="auth-form__text-link">Điều khoản dịch vụ</a> &
+                            <a href="#" class="auth-form__text-link">Chính sách bảo mật</a>
+                        </p>
+                    </div>
+
+                    <div class="auth-form__controls">
+                        <button class="btn auth-form__controls-back">TRỞ LẠI</button>
+                        <button class="btn btn--primary" type="submit" form="form1">ĐĂNG KÝ</button>
+                    </div>
+                </div>
+
+                <div class="auth-form__socials">
+                    <a href="" class="auth-form__socials--facebook btn btn--side-s btn--with-icon">
+                        <!-- <i class="auth-form__socials-icon fab fa-facebook-square"></i>
+                        <span class="auth-form__socials--title">Kết nối với Facebook</span> -->
+                        <fb:login-button 
+                        scope="public_profile,email"
+                        onlogin="checkLoginState();">
+                        </fb:login-button>
+                    </a>
+                    <a href="" class="auth-form__socials--google btn btn--side-s btn--with-icon">
+                        <i class="auth-form__socials-icon fab fa-google"></i>
+                        <span class="auth-form__socials--title">Kết nối với Google</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="./js/until.js"></script>
+
+    <script src="./js/Register/handleRegister.js"></script>
+    <script type="text/javascript" src="./js/LoginAndRegister/loginandregister.js"></script>
+    <!-- <script src="./js/handleLogin.js"></script> -->
+    <script type="text/javascript" src="js/facebook-sdk.js"></script>
+</body>
+
+</html>

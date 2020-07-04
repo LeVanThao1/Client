@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourLap Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/chitiet.css">
+    <link rel="stylesheet" href="./assets/css/cart.css">
+    <link rel="stylesheet" href="./assets/css/thanhtoan.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+</head>
+
+<body>
+    
+    <!-- BEM - block elements modifier -->
+    <div class="modal">
+        <div class="modal__overlay">
+
+        </div>
+
+        <div class="modal__body">
+
+
+            <!-- Buy form -->
+            <div class="auth-form">
+                <div class="auth-form__container auth-form__pay">
+
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Địa chỉ giao/nhận hàng</h3>
+                    </div>
+
+                    <form class="auth-form__form">
+                        <div class="auth-form__group">
+                            <input type="text" id="name" class="auth-form__input" placeholder="Họ và tên">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="text" id="phone" class="auth-form__input" placeholder="Số điện thoại">
+                        </div>
+                        <div class="auth-form__group">
+                            <!-- <input type="text" class="auth-form__input tinh" placeholder="Tỉnh/Thành phố"> -->
+                            <select class="auth-form__input tinh " id="provinces">
+                                <option value="0">Tỉnh/Thành phố</option>
+                            </select>
+                        </div>
+                        <div class="auth-form__group">
+                            <!-- <input type="text" class="auth-form__input quan" placeholder="Quận/Huyện"> -->
+                            <select class="auth-form__input tinh " id="district">
+                                <option value="0">Quận/Huyện</option>
+                            </select>
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="text" id="warn" class="auth-form__input xa" placeholder="Phường/Xã">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="text" id="street" class="auth-form__input" placeholder="Tòa nhà/Tên đường...">
+                        </div>
+                    </form>
+
+                    <div class="auth-form__aside">
+                        <p class="auth-form__policy-text">
+                            Chúng tôi sẽ chuyển hàng và thanh toán sau khi nhận hàng.
+                        </p>
+                    </div>
+
+                    <div class="auth-form__controls">
+                        <button class="btn auth-form__controls-back">TRỞ LẠI</button>
+                        <button class="btn btn--primary payment">HOÀN THÀNH</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/until.js"></script>
+    <script>
+
+        localStorage.removeItem('path')
+        $('.auth-form__controls-back').click(() => {
+            const prev = localStorage.getItem('pathprev');
+            localStorage.removeItem('productId')
+            if(prev) {
+                redirect(prev);
+            } else {
+                redirect('cart.html')
+            }
+        });
+    </script>
+    <script src="./js/Payment/LoadCity.js"></script>
+    <script src="./js/Payment/handlePayment.js"></script>
+    <!-- <script src="./js/Payment/LoadField.js"></script> -->
+</body>
+
+</html>

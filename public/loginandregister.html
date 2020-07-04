@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourLap Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/loginandregister.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/until.js"></script>
+    <!-- <script>
+        async function checkToken() {
+            const token = localStorage.getItem('token')
+            const reponse = await axios.get(`http://localhost:3001/api/v1/auth?token=${token}`);
+            if(!reponse.data.user) {
+                redirect('loginandregiter.html')
+            }
+            console.log(reponse)
+        }
+    </script> -->
+</head>
+
+<body>
+    <!-- BEM - block elements modifier -->
+    <div class="modal">
+        <div class="modal__overlay">
+
+        </div>
+
+        <div class="modal__body">
+                <!-- Register form -->
+            <div class="auth-form" id="register">
+                <div class="auth-form__container">
+
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Đăng ký</h3>
+                        <span class="auth-form_switch-btn" id="pass-to-login">Đăng nhập</span>
+                    </div>
+
+                    <form class="auth-form__form" id="form1">
+                        <div class="auth-form__group">
+                            <input id="user_mail" type="email" name="user_email" class="auth-form__input" placeholder="Nhập email của bạn" required>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                        <div class="auth-form__group">
+                            <input id="user_pass" type="password" name="user_password" class="auth-form__input" placeholder="Nhập mật khẩu của bạn" required>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                        <div class="auth-form__group">
+                            <input id="user_confirmpass" type="password" name="confirm_password" class="auth-form__input" placeholder="Nhập lại mật khẩu" required>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                    </form>
+
+                    <div class="auth-form__aside">
+                        <p class="auth-form__policy-text">
+                            Bằng việc đăng ký, bạn đã đồng ý với chúng tôi về
+                            <a href="#" class="auth-form__text-link">Điều khoản dịch vụ</a> &
+                            <a href="#" class="auth-form__text-link">Chính sách bảo mật</a>
+                        </p>
+                    </div>
+
+                    <div class="auth-form__controls">
+                        <button class="btn auth-form__controls-back">TRỞ LẠI</button>
+                        <button class="btn btn--primary" type="submit" form="form1">ĐĂNG KÝ</button>
+                    </div>
+                </div>
+
+                <div class="auth-form__socials">
+                    <a href="" class="auth-form__socials--facebook btn btn--side-s btn--with-icon">
+                        <i class="auth-form__socials-icon fab fa-facebook-square"></i>
+                        <span class="auth-form__socials--title">Kết nối với Facebook</span>
+                    </a>
+                    <a href="" class="auth-form__socials--google btn btn--side-s btn--with-icon">
+                        <i class="auth-form__socials-icon fab fa-google"></i>
+                        <span class="auth-form__socials--title">Kết nối với Google</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Login form  Đây là phần cho nút đăng nhập ------------------------------->
+            <div class="auth-form" id="login">
+                <div class="auth-form__container">
+
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Đăng nhập</h3>
+                        <a href="#register"><span class="auth-form_switch-btn" id="pass-to-register">Đăng ký</span></a>
+                    </div>
+
+                    <form class="auth-form__form" id="form2">
+                        <div class="auth-form__group">
+                            <input type="email" name="login_email" id="email" class="auth-form__input" placeholder="Nhập email của bạn" required>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" name="login_password" id="password" class="auth-form__input" placeholder="Nhập mật khẩu của bạn" required>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+
+                    </form>
+
+                    <div class="auth-form__aside">
+                        <div class="auth-form__help">
+                            <a href="#" class="auth-form__help-link auth-form__help-forgot">
+                                Quên mật khẩu
+                            </a>
+                            <span class="auth-form__help-separate"></span>
+                            <a href="#" class="auth-form__help-link">
+                                Cần trợ giúp?
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="auth-form__controls">
+                        <button class="btn auth-form__controls-back">TRỞ LẠI</button>
+                        <button class="btn btn--primary Login" type="submit" form="form2">ĐĂNG NHẬP</button>
+                    </div>
+                </div>
+
+                <div class="auth-form__socials">
+                    <a href="" class="auth-form__socials--facebook btn btn--side-s btn--with-icon">
+                        <!-- <i class="auth-form__socials-icon fab fa-facebook-square"></i> -->
+                        <!-- <span class="auth-form__socials--title">Kết nối với Facebook</span> -->
+                        <fb:login-button 
+                        scope="public_profile,email"
+                        onlogin="checkLoginState();">
+                        </fb:login-button>
+                    </a>
+                    <a href="" class="auth-form__socials--google btn btn--side-s btn--with-icon">
+                        <i class="auth-form__socials-icon fab fa-google"></i>
+                        <span class="auth-form__socials--title">Kết nối với Google</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        if(window.location.hash === "#register") {
+            $('#login').css("visibility", "hidden")
+            $('#login').css("left", "-500px")
+            $('#register').css("left", "0")
+        }
+        var pass_login = document.getElementById("pass-to-login");
+        var pass_register = document.getElementById("pass-to-register");
+        var login = document.getElementById("login");
+        var register = document.getElementById("register");
+
+        $('#pass-to-login').click(function(){
+            // register.style.left = '-500px';
+            // login.style.left = '0';
+            $('#login').css("visibility", "visible")
+            $('#login').css("left", "0");
+
+            $('#register').css("visibility", "hidden")
+            $('#register').css("right", "-500px");
+        });
+        $('#pass-to-register').click(function(){
+            // register.style.left = '0';
+            // login.style.left = '500px';
+            $('#login').css("visibility", "hidden")
+            $('#login').css("left", "-500px")
+            
+
+            $('#login').css("visibility", "visible")
+            $('#register').css("right", "500px")
+            
+        });
+
+
+        // Validate
+        const registerForm = document.getElementById('form1');
+        const loginForm = document.getElementById('form2');
+        const user_mail = document.getElementById('user_mail');
+        const user_pass = document.getElementById('user_pass');
+        const user_confirmpass = document.getElementById('user_confirmpass');
+        const login_email = document.getElementById('email');
+        const login_pass = document.getElementById('password');
+        
+
+        // Validate registerForm
+        registerForm.addEventListener('submit',function(e){
+            e.preventDefault();
+            checkInputsRegister();
+        });
+
+        loginForm.addEventListener('submit',function(e){
+            e.preventDefault();
+            checkInputsLogin();
+        });
+
+
+
+        function checkInputsRegister(){
+            const user_mailValue = user_mail.value.trim();
+            const user_passValue = user_pass.value.trim();
+            const user_confirmpassValue = user_confirmpass.value.trim();
+
+            if(user_mailValue === ''){
+                setErrorFor(user_mail,'Email không được để trống');
+            }else if(!isEmail(user_mailValue)){
+                setErrorFor(user_mail,'Email không hợp lệ, xin thử lại');
+            }else{
+                setSuccessFor(user_mail);
+            }
+
+            if(user_passValue === ''){
+                setErrorFor(user_pass,'Mật khẩu không được để trống');
+            }else if(!isPassword(user_passValue)){
+                setErrorFor(user_pass,'Tối thiểu 8 kí tự. Bao gồm 1 chữ hoa, 1 chữ thường và 1 số');
+            }else {
+                setSuccessFor(user_pass);
+            }
+
+            if(user_confirmpassValue === ''){
+                setErrorFor(user_confirmpass,'Bạn phải nhập để xác nhận mật khẩu mới')
+            }else if(user_passValue !== user_confirmpassValue){
+                setErrorFor(user_confirmpass,'Mật khẩu mới không trùng khớp');
+                
+            }else{
+                setSuccessFor(user_confirmpass);
+            }
+        }
+
+        function checkInputsLogin(){
+            const login_emailValue = login_email.value.trim();
+            const login_passValue = login_pass.value.trim();
+
+            if(login_emailValue === ''){
+                setErrorFor(login_email,'Email không được để trống');
+            }else if(!isEmail(login_emailValue)){
+                setErrorFor(login_email,'Email không hợp lệ, xin thử lại');
+            }else{
+                setSuccessFor(login_email);
+            }
+
+            if(login_passValue === ''){
+                setErrorFor(login_pass,'Mật khẩu không được để trống');
+            }else if(!isPassword(login_passValue)){
+                setErrorFor(login_pass,'Tối thiểu 8 kí tự. Bao gồm 1 chữ hoa, 1 chữ thường và 1 số');
+            }else {
+                setSuccessFor(login_pass);
+            }
+        }
+
+
+        function isEmail(email){
+            return /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+        }
+
+        function isPassword(pass) {
+            return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/.test(pass);
+        }
+        function setErrorFor(input,message){
+            const formcontrol = input.parentElement;
+            const small = formcontrol.querySelector('small');
+            small.innerText = message;
+            formcontrol.classList.add('error');
+        }
+
+        function setSuccessFor(input){
+            const formControl = input.parentElement;
+            formControl.classList.add('success');
+        }
+    </script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
+    <script src="./js/handleLogin.js"></script>
+    <script type="text/javascript" src="js/facebook-sdk.js"></script>
+    <script src="./js/until.js"></script>
+</body>
+
+</html>

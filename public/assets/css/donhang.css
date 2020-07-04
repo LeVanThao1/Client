@@ -1,0 +1,7 @@
+.cart_content {
+    background-color: transparent;
+}
+.cart_content-child {
+    background-color: white;
+    margin-bottom: 20px;
+}

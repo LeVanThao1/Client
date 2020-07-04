@@ -1,0 +1,92 @@
+.auth-form__form {
+    padding: 20px 40px;
+}
+.auth-form__group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+.auth-form__group i {
+    position: absolute;
+    top: 12px;
+    right: 74px;
+    font-size: 1.5rem;
+    visibility: hidden;
+}
+.auth-form__group small {
+    position: absolute;
+    visibility: hidden;
+    bottom: -26px;
+    left: 484px;
+    font-size: 1.3rem;
+}
+
+.auth-form__group.error small {
+    visibility: visible;
+    color: #e74c3c;
+}
+
+.auth-form__group.success input {
+    border-color: #2ecc71;
+}
+.auth-form__group.success i.fa-check-circle {
+    visibility: visible;
+    color: #2ecc71;
+}
+
+.auth-form__group.error i.fa-exclamation-circle {
+    visibility: visible;
+    color: #e74c3c;
+}
+.auth-form__group.error input {
+    border-color: #e74c3c;
+}
+
+.auth-form__input {
+    margin-left: 78px;
+    margin-top: 0;
+    margin-right: 60px;
+    padding: 0 28px;
+}
+.info_user_label {
+    width: 110px;
+    min-width: 110px;
+    font-size: 1.4rem;
+    color: rgb(51, 51, 51);
+}
+.info_user_gender {
+    margin-left: 80px;
+    display: flex;
+}
+.auth-form__input.input_radio {
+    width: 24px;
+    height: 24px;
+    margin-left: 0;
+    margin-right: 10px;
+}
+.auth-form__group.group_change_password{
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.auth-form__group.group_change_password.checkbox {
+    margin-bottom: 40px;
+}
+.info_user_label.label_for_password {
+    width: 300px;
+}
+.info_user_gender.change_password {
+    margin-left: 0;
+}
+.auth-form__group.deleted_marinbottom {
+    margin-bottom: 8px;
+}
+.error-message {
+    font-size: 1.3rem;
+    margin-right: 50px;
+}
+.auth-form__group.group_change_password .btn.btn--primary {
+    margin-right: 50px;
+    margin-bottom: 28px;
+    margin-top: 0;
+}

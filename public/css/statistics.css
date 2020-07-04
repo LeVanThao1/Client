@@ -1,0 +1,12 @@
+.statistics label{
+	font-family: 'Roboto Slab', serif;
+
+}
+
+.statistics{
+	margin-left: 40px;
+}
+
+table{
+	border-bottom: 1px solid #eee;
+}

@@ -1,0 +1,22 @@
+.modal__overlay {
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../img/background_thanhtoan.jpg);
+    background-position: center;
+	background-size: cover;
+	/*background-attachment: fixed;*/
+	position: absolute;
+}
+.modal__body {
+	height: 430px;
+}
+.auth-form__container {
+	padding: 20px 32px;
+}
+.auth-form__heading {
+	margin-top: 5px;
+}
+.auth-form__header {
+	padding: 0 8px;
+}
+.auth-form__form {
+	margin-bottom: 20px;
+}

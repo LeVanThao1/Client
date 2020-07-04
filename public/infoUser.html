@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Infomation User</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/chitiet.css">
+    <link rel="stylesheet" href="./assets/css/cart.css">
+    <link rel="stylesheet" href="./assets/css/infoUser.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+   
+</head>
+
+<body>
+    <!-- BEM - block elements modifier -->
+    <div class="app">
+        <header class="header">
+            <div class="grid">
+                <nav class="header__navbar">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item--has-qr  header__navbar-item--separate">
+                            Vào cửa hàng sử dụng ứng dụng
+                            <!--  Header QR Code -->
+                            <div class="header__qr">
+                                <img src="./assets/img/qr_code.png" alt="QR Code" class="header__qr-img">
+                                <div class="header__qr-apps">
+                                    <a href="#" class="header__qr-link">
+                                        <img src="./assets/img/google_play.png" alt="Google Play"
+                                            class="header__qr-download-img">
+                                    </a>
+
+                                    <a href="#" class="header__qr-link">
+                                        <img src="./assets/img/app_store.png" alt="App Store"
+                                            class="header__qr-download-img">
+                                    </a>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="header__navbar-item">
+                            <span class="header__navbar-title--no-poiter">Kết nối</span>
+                            <a href="#" class="header__navbar-icon-link">
+                                <i class="header__navbar-icon fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="header__navbar-icon-link">
+                                <i class="header__navbar-icon fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item--hasNotify">
+                            <a href="#" class="header__navbar-item-link">
+                                <i class="header__navbar-icon far fa-bell"></i>
+                                Thông báo
+                            </a>
+                            <div class="header__notify">
+                                <header class="header__notify-header">
+                                    <h3>Thông báo mới nhận</h3>
+
+                                </header>
+                                <ul class="header__notify-list">
+                                    <li class="header__notify-item header__notify-item--viewed">
+                                        <a href="#" class="header__notify-link">
+                                            <img src="https://sohanews.sohacdn.com/thumb_w/660/2019/5/5/photo-27-1556990909187936533268-crop-155699121665095351785.jpg"
+                                                alt="Mỹ phẩm" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Mỹ phẩm chính hãng</span>
+                                                <span class="header__notify-descriotion">Mô tả mỹ phẩm chính hãng</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item header__notify-item--viewed">
+                                        <a href="#" class="header__notify-link">
+                                            <img src="https://sohanews.sohacdn.com/thumb_w/660/2019/5/5/photo-27-1556990909187936533268-crop-155699121665095351785.jpg"
+                                                alt="Mỹ phẩm" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Mỹ phẩm chính hãng</span>
+                                                <span class="header__notify-descriotion">Mô tả mỹ phẩm chính hãng</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item">
+                                        <a href="#" class="header__notify-link">
+                                            <img src="https://sohanews.sohacdn.com/thumb_w/660/2019/5/5/photo-27-1556990909187936533268-crop-155699121665095351785.jpg"
+                                                alt="Mỹ phẩm" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Mỹ phẩm chính hãng tuyệt đối an toàn
+                                                    với người sử dụng</span>
+                                                <span class="header__notify-descriotion">Mô tả mỹ phẩm chính hãng</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <footer class="header__notify-footer">
+                                    <a href="#" class="header__notify-footer-btn">Xem tất cả</a>
+                                </footer>
+                            </div>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="#" class="header__navbar-item-link">
+                                <i class="header__navbar-icon far fa-question-circle"></i>
+                                Trợ giúp
+                            </a>
+                        </li>
+                        <!-------------- Khi chưa đăng nhập thì mở phần trên này ----------- -->
+                        <!-- <li class="header__navbar-item header__navbar-item--bold header__navbar-item--separate">Đăng ký</li>
+                            <li class="header__navbar-item header__navbar-item--bold">Đăng nhập</li> -->
+                        <!-- ----- Khi đã đăng nhập thì mở phần dưới này------- ---------------->
+                        <li class="header__navbar-item header__navbar-user">
+                            <!-- <img src="https://yt3.ggpht.com/a-/AOh14GipqfexOZj7ZjGVROd29XTD08hyTx28Gl7dC5IP=s88-c-k-c0xffffffff-no-rj-mo"
+                                alt="photo" class="header__navbar-user-img">
+                            <span class="header__navbar-user-name">Anh Lâm</span>
+                            <ul class="header__navbar-user-menu">
+                                <li class="header__navbar-user-item">
+                                    <a href="#">Tài khoản của tôi</a>
+                                </li>
+                                <li class="header__navbar-user-item">
+                                    <a href="#">Địa chỉ của tôi</a>
+                                </li>
+                                <li class="header__navbar-user-item">
+                                    <a href="#">Đơn mua</a>
+                                </li>
+                                <li class="header__navbar-user-item header__navbar-user-item--separate">
+                                    <a href="#">Đăng xuất</a>
+                                </li> -->
+                            </ul>
+                        </li>
+                    </ul>
+
+                </nav>
+                <!--  Header with search -->
+                <div class="header-with-search">
+                    <div class="header__logo">
+                        <a href="/homepage.html" class="header__logo-link">
+                            <img src="./assets/img/logouse.PNG" alt="Logo" class="header__logo-img">
+                        </a>
+                    </div>
+
+                    <div class="header__search">
+                        <div class="header__search-input-wrap">
+                            <form action="#" class="header__search-form">
+                                <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm">
+                            </form>
+                            <!-- Search history -->
+                            <div class="header__search-history">
+                                <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                                <ul class="header__search-history-list">
+                                    <li class="header__search-history-item">
+                                        <a href="#">Laptop gaming</a>
+                                    </li>
+                                    <li class="header__search-history-item">
+                                        <a href="#">Macbook</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header__search-select">
+                            <span class="header__search-select-label">Trong website</span>
+                            <i class="header__search-select-icon fas fa-angle-down"></i>
+                            <ul class="header__search-option">
+                                <li class="header__search-option-item header__search-option-item--active">
+                                    <span>Trong website</span>
+                                    <i class="fas fa-check"></i>
+                                </li>
+                                <li class="header__search-option-item">
+                                    <span>Ngoài website</span>
+                                    <i class="fas fa-check"></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="header__search-btn">
+                            <i class="header__search-btn-icon fas fa-search"></i>
+                        </button>
+                    </div>
+                    <!-- Cart -->
+                    <div class="header__cart">
+                        <div class="header__cart-wrap">
+                            <i class="header__cart-icon fas fa-shopping-cart"></i>
+                            <span class="header__cart-notice">0</span>
+                            <!-- While no cart : add class header__cart-list--no-cart -->
+                            <div class="header__cart-list ">
+                                <!-- <img src="./assets/img/noCart.png" alt="No-cart" class="header__cart-no-cart-img">
+                                <span class="header__cart-list-no-cart-msg">Chưa có sản phẩm</span>
+                                <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
+                                <ul class="header__cart-list-item"> -->
+                                    <!-- Cart item -->
+                                    <!-- <li class="header__cart-item">
+                                        <img src="https://cdn.tgdd.vn/Products/Images/44/106875/apple-macbook-air-mqd32sa-a-i5-5350u-600x600.jpg"
+                                            alt="Photo" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Laptop Apple MacBook Air 2017</h5>
+                                                <div class="header__cart-item-buy-wrap">
+                                                    <span class="header__cart-item-price">19.990.000đ</span>
+                                                    <span class="header__cart-item-multipy">x</span>
+                                                    <span class="header__cart-item-quantity">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">Phân loại: Apple</span>
+                                                <span class="header__cart-item-btnremove">Xóa</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="https://cdn.tgdd.vn/Products/Images/44/106875/apple-macbook-air-mqd32sa-a-i5-5350u-600x600.jpg"
+                                            alt="Photo" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Laptop Apple MacBook Air 2017</h5>
+                                                <div class="header__cart-item-buy-wrap">
+                                                    <span class="header__cart-item-price">19.990.000đ</span>
+                                                    <span class="header__cart-item-multipy">x</span>
+                                                    <span class="header__cart-item-quantity">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">Phân loại: Apple</span>
+                                                <span class="header__cart-item-btnremove">Xóa</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="https://cdn.tgdd.vn/Products/Images/44/106875/apple-macbook-air-mqd32sa-a-i5-5350u-600x600.jpg"
+                                            alt="Photo" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Laptop Apple MacBook Air 2017</h5>
+                                                <div class="header__cart-item-buy-wrap">
+                                                    <span class="header__cart-item-price">19.990.000đ</span>
+                                                    <span class="header__cart-item-multipy">x</span>
+                                                    <span class="header__cart-item-quantity">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">Phân loại: Apple</span>
+                                                <span class="header__cart-item-btnremove">Xóa</span>
+                                            </div>
+                                        </div>
+                                    </li> 
+                                </ul>-->
+                                <a href="#" class="header__cart-view-cart btn btn--primary">Xem giỏ hàng</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </header>
+        <div class="app_container">
+            <div class="grid">
+                <div class="grid__row app_content">
+                    <div class="grid__column-12">
+                        <div class="cart-path">
+                            <h3 class="cart-path-cart">THÔNG TIN KHÁCH HÀNG</h3>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="grid__row cart_wrap">
+                    <div class="grid__column-12">
+                        <div class="cart_content">
+                            <form class="auth-form__form" accept-charset="utf-8" id="form">
+                                <div class="auth-form__group">
+                                    <label class="info_user_label" for="user_name">Tên Khách Hàng</label>
+                                    <input spellcheck="false" id="user_name" name="info_name" type="text"
+                                        class="auth-form__input" value="">
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <small>Error message</small>
+                                </div>
+                                <div class="auth-form__group">
+                                    <label class="info_user_label" for="user_email">Email</label>
+                                    <input type="text" name="info_email" id="user_email" class="auth-form__input"
+                                        disabled value="">
+                                </div>
+                                <div class="auth-form__group">
+                                    <label class="info_user_label" for="user_sdt">Số Điện Thoại</label>
+                                    <input type="text" id="user_sdt" name="info_sdt" class="auth-form__input"
+                                        value="">
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <small>Error message</small>
+                                </div>
+                                <div class="auth-form__group">
+                                    <label class="info_user_label" for="">Giới Tính</label>
+                                    <div class="info_user_gender">
+                                        <input id="male" type="radio" name="gender" class="auth-form__input input_radio"
+                                            value="Male">
+                                        <label class="info_user_label" for="male">Nam</label>
+                                        <input id="female" type="radio" name="gender"
+                                            class="auth-form__input input_radio" value="Female">
+                                        <label class="info_user_label" for="female">Nữ</label>
+                                    </div>
+                                </div>
+                                <div class="auth-form__group">
+                                    <label class="info_user_label" for="user_date">Ngày Sinh</label>
+                                    <input type="date" id="user_date" name="info_birthday" class="auth-form__input"
+                                        value="">
+                                </div>
+                                <div class="auth-form__group">
+                                    <label class="info_user_label" for="user_address">Địa chỉ</label>
+                                    <input spellcheck="false" name="info_address" id="user_address" type="text"
+                                        class="auth-form__input" value="">
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <small>Error message</small>
+                                </div>
+                                <div class="auth-form__group">
+                                    <label class="info_user_label" for="user_registration_date">Ngày Đăng ký</label>
+                                    <input type="date" name="info_registration_date" id="user_registration_date"
+                                        class="auth-form__input" value="" disabled>
+                                </div>
+                                <div class="auth-form__group group_change_password checkbox">
+                                    <label class="info_user_label" for=""></label>
+                                    <div class="info_user_gender change_password">
+                                        <input id="submit_change_password" type="checkbox"
+                                            class="auth-form__input input_radio">
+                                        <label class="info_user_label label_for_password"
+                                            for="submit_change_passwords">Thay Đổi Mật Khẩu</label>
+                                    </div>
+                                </div>
+
+                                 <div class="changepassword">
+                                    <!--<div class="auth-form__group">
+                                        <label class="info_user_label" for="old_password">Mật Khẩu Cũ</label>
+                                        <input spellcheck="false" name="info_oldpass" id="old_password" required
+                                            type="password" class="auth-form__input" value>
+                                        <i class="fas fa-check-circle"></i>
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        <small>Error message</small>
+                                    </div>
+                                    <div class="auth-form__group">
+                                        <label class="info_user_label" for="password">Mật Khẩu Mới</label>
+                                        <input id="password" name="info_newpass" spellcheck="false"
+                                            required type="password" class="auth-form__input" value>
+                                        <i class="fas fa-check-circle"></i>
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        <small>Error message</small>
+                                    </div>
+                                    <div class="auth-form__group deleted_marinbottom">
+                                        <label class="info_user_label" for="confirm_password">Nhập Lại Mật Khẩu</label>
+                                        <input id="confirm_password" name="info_confirmpass" spellcheck="false"
+                                             required type="password" class="auth-form__input" value>
+                                        <i class="fas fa-check-circle"></i>
+                                        <i class="fas fa-exclamation-circle"></i>
+                                    </div>
+                                    <div class="auth-form__group group_change_password">
+                                        <div id="message" class="error-message"></div>
+                                    </div>-->
+                                </div> 
+                                <div class="auth-form__group group_change_password">
+                                    <button type="submit" class="btn btn--primary update">Cập Nhật</button>
+                                </div>
+                                <div id="succ" style="color: green; font-size: 16px;"></div>
+                                <div id="err" style="color: red; font-size: 16px;"></div>
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">Chăm sóc khách hàng</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">Trung tâm trợ giúp</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">YourLap Mail</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">Hướng dẫn mua hàng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">Giới thiệu</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">Giới thiệu</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">Tuyển dụng</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">Điều khoản dịch vụ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">Lời cảm ơn</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">Cảm ơn đã sử dụng dịch vụ của chúng tôi</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">Cảm ơn đã đánh giá tốt</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">Cảm ơn vì đã tin tưởng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">Theo dõi chúng tôi</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">
+                                    <i class="footer-item__icon fab fa-facebook"></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">
+                                    <i class="footer-item__icon fab fa-instagram"></i>
+                                    Instagram
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">
+                                    <i class="footer-item__icon fab fa-linkedin"></i>
+                                    Linkedin
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
+                        <div class="footer__download">
+                            <img src="assets/img/qr_code.png" alt="Download QR" class="footer__download-qr">
+                            <div class="footer__download-apps">
+                                <a href="#" class="footer__download-apps-link">
+                                    <img src="./assets/img/google_play.png" alt="Google play"
+                                        class="footer__download-apps-img">
+                                </a>
+                                <a href="#" class="footer__download-apps-link">
+                                    <img src="./assets/img/app_store.png" alt="App store"
+                                        class="footer__download-apps-img">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer__bottom">
+                <div class="grid">
+                    <p class="footer__text">Đồ án CIDO CS 397 N : Duy Quang - Anh Lâm - Văn Thảo - Thái Bảo</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- <script src="./js/jquery.min.js"></script> -->
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/until.js"></script>
+    <script src="./js/infoUser/validateInfoUser.js"></script>
+    <script src="./js/LoadCart.js"></script>
+    <script src="./js/Homepage/LoadUser.js"></script>
+    <script src="./js/infoUser/LoadInfo.js"></script>
+    <script src="./js/infoUser/HandleUpdate.js"></script>
+    
+</body>
+
+</html>

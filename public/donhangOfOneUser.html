@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourLap Shop</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/chitiet.css">
+    <link rel="stylesheet" href="./assets/css/cart.css">
+    <link rel="stylesheet" href="./assets/css/donhang.css">
+    <link rel="stylesheet" href="./assets/css/donhangOfOneUser.css">
+    <link rel="stylesheet" href="./css/order.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="./js/until.js"></script>
+    <script>
+        const token = localStorage.getItem('token');
+        const userId = localStorage.getItem('userId');
+        if(!token || !userId) {
+            redirect('login.html');
+        }
+    </script>
+</head>
+
+<body>
+    
+    <!-- BEM - block elements modifier -->
+    <div class="app">
+        <header class="header">
+            <div class="grid">
+                <nav class="header__navbar">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item--has-qr  header__navbar-item--separate">
+                            Vào cửa hàng sử dụng ứng dụng
+                            <!--  Header QR Code -->
+                            <div class="header__qr">
+                                <img src="./assets/img/qr_code.png" alt="QR Code" class="header__qr-img">
+                                <div class="header__qr-apps">
+                                    <a href="#" class="header__qr-link">
+                                        <img src="./assets/img/google_play.png" alt="Google Play"
+                                            class="header__qr-download-img">
+                                    </a>
+
+                                    <a href="#" class="header__qr-link">
+                                        <img src="./assets/img/app_store.png" alt="App Store"
+                                            class="header__qr-download-img">
+                                    </a>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="header__navbar-item">
+                            <span class="header__navbar-title--no-poiter">Kết nối</span>
+                            <a href="#" class="header__navbar-icon-link">
+                                <i class="header__navbar-icon fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="header__navbar-icon-link">
+                                <i class="header__navbar-icon fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="header__navbar-list user">
+                        <li class="header__navbar-item header__navbar-item--hasNotify">
+                            <a href="#" class="header__navbar-item-link">
+                                <i class="header__navbar-icon far fa-bell"></i>
+                                Thông báo
+                            </a>
+                            <div class="header__notify">
+                                <header class="header__notify-header">
+                                    <h3>Thông báo mới nhận</h3>
+
+                                </header>
+                                <ul class="header__notify-list">
+                                    <li class="header__notify-item header__notify-item--viewed">
+                                        <a href="#" class="header__notify-link">
+                                            <img src="https://sohanews.sohacdn.com/thumb_w/660/2019/5/5/photo-27-1556990909187936533268-crop-155699121665095351785.jpg"
+                                                alt="Mỹ phẩm" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Mỹ phẩm chính hãng</span>
+                                                <span class="header__notify-descriotion">Mô tả mỹ phẩm chính hãng</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item header__notify-item--viewed">
+                                        <a href="#" class="header__notify-link">
+                                            <img src="https://sohanews.sohacdn.com/thumb_w/660/2019/5/5/photo-27-1556990909187936533268-crop-155699121665095351785.jpg"
+                                                alt="Mỹ phẩm" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Mỹ phẩm chính hãng</span>
+                                                <span class="header__notify-descriotion">Mô tả mỹ phẩm chính hãng</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item">
+                                        <a href="#" class="header__notify-link">
+                                            <img src="https://sohanews.sohacdn.com/thumb_w/660/2019/5/5/photo-27-1556990909187936533268-crop-155699121665095351785.jpg"
+                                                alt="Mỹ phẩm" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Mỹ phẩm chính hãng tuyệt đối an toàn
+                                                    với người sử dụng</span>
+                                                <span class="header__notify-descriotion">Mô tả mỹ phẩm chính hãng</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <footer class="header__notify-footer">
+                                    <a href="#" class="header__notify-footer-btn">Xem tất cả</a>
+                                </footer>
+                            </div>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="#" class="header__navbar-item-link">
+                                <i class="header__navbar-icon far fa-question-circle"></i>
+                                Trợ giúp
+                            </a>
+                        </li>
+                        <!-------------- Khi chưa đăng nhập thì mở phần trên này ----------- -->
+                        <!-- <li class="header__navbar-item header__navbar-item--bold header__navbar-item--separate">Đăng ký</li>
+                            <li class="header__navbar-item header__navbar-item--bold">Đăng nhập</li> -->
+                        <!-- ----- Khi đã đăng nhập thì mở phần dưới này------- ---------------->
+                        <li class="header__navbar-item header__navbar-user">
+                            <!-- <img src="https://yt3.ggpht.com/a-/AOh14GipqfexOZj7ZjGVROd29XTD08hyTx28Gl7dC5IP=s88-c-k-c0xffffffff-no-rj-mo"
+                                alt="photo" class="header__navbar-user-img">
+                            <span class="header__navbar-user-name">Anh Lâm</span>
+                            <ul class="header__navbar-user-menu">
+                                <li class="header__navbar-user-item">
+                                    <a href="#">Tài khoản của tôi</a>
+                                </li>
+                                <li class="header__navbar-user-item">
+                                    <a href="#">Địa chỉ của tôi</a>
+                                </li>
+                                <li class="header__navbar-user-item">
+                                    <a href="#">Đơn mua</a>
+                                </li>
+                                <li class="header__navbar-user-item header__navbar-user-item--separate">
+                                    <a href="#">Đăng xuất</a>
+                                </li>
+                            </ul> -->
+                        </li>
+                    </ul>
+
+                </nav>
+                <!--  Header with search -->
+                <div class="header-with-search">
+                    <div class="header__logo">
+                        <a href="/" class="header__logo-link">
+                            <img src="./assets/img/logouse.PNG" alt="Logo" class="header__logo-img">
+                        </a>
+                    </div>
+
+                    <div class="header__search">
+                        <div class="header__search-input-wrap">
+                            <form action="#" class="header__search-form">
+                                <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm">
+                            </form>
+                            <!-- Search history -->
+                            <div class="header__search-history">
+                                <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                                <ul class="header__search-history-list">
+                                    <li class="header__search-history-item">
+                                        <a href="#">Laptop gaming</a>
+                                    </li>
+                                    <li class="header__search-history-item">
+                                        <a href="#">Macbook</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header__search-select">
+                            <span class="header__search-select-label">Trong website</span>
+                            <i class="header__search-select-icon fas fa-angle-down"></i>
+                            <ul class="header__search-option">
+                                <li class="header__search-option-item header__search-option-item--active">
+                                    <span>Trong website</span>
+                                    <i class="fas fa-check"></i>
+                                </li>
+                                <li class="header__search-option-item">
+                                    <span>Ngoài website</span>
+                                    <i class="fas fa-check"></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="header__search-btn">
+                            <i class="header__search-btn-icon fas fa-search"></i>
+                        </button>
+                    </div>
+                    <!-- Cart -->
+                    <div class="header__cart">
+                        <div class="header__cart-wrap">
+                            <i class="header__cart-icon fas fa-shopping-cart"></i>
+                            <span class="header__cart-notice">0</span>
+                            <!-- While no cart : add class header__cart-list--no-cart -->
+                            <div class="header__cart-list ">
+                                <!-- <img src="./assets/img/noCart.png" alt="No-cart" class="header__cart-no-cart-img">
+                                <span class="header__cart-list-no-cart-msg">Chưa có sản phẩm</span>
+                                <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>-->
+                                <!-- <ul class="header__cart-list-item">  -->
+                                    <!-- Cart item -->
+                                    <!-- <li class="header__cart-item">
+                                        <img src="https://cdn.tgdd.vn/Products/Images/44/106875/apple-macbook-air-mqd32sa-a-i5-5350u-600x600.jpg"
+                                            alt="Photo" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Laptop Apple MacBook Air 2017</h5>
+                                                <div class="header__cart-item-buy-wrap">
+                                                    <span class="header__cart-item-price">19.990.000đ</span>
+                                                    <span class="header__cart-item-multipy">x</span>
+                                                    <span class="header__cart-item-quantity">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">Phân loại: Apple</span>
+                                                <span class="header__cart-item-btnremove">Xóa</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="https://cdn.tgdd.vn/Products/Images/44/106875/apple-macbook-air-mqd32sa-a-i5-5350u-600x600.jpg"
+                                            alt="Photo" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Laptop Apple MacBook Air 2017</h5>
+                                                <div class="header__cart-item-buy-wrap">
+                                                    <span class="header__cart-item-price">19.990.000đ</span>
+                                                    <span class="header__cart-item-multipy">x</span>
+                                                    <span class="header__cart-item-quantity">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">Phân loại: Apple</span>
+                                                <span class="header__cart-item-btnremove">Xóa</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="https://cdn.tgdd.vn/Products/Images/44/106875/apple-macbook-air-mqd32sa-a-i5-5350u-600x600.jpg"
+                                            alt="Photo" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Laptop Apple MacBook Air 2017</h5>
+                                                <div class="header__cart-item-buy-wrap">
+                                                    <span class="header__cart-item-price">19.990.000đ</span>
+                                                    <span class="header__cart-item-multipy">x</span>
+                                                    <span class="header__cart-item-quantity">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">Phân loại: Apple</span>
+                                                <span class="header__cart-item-btnremove">Xóa</span>
+                                            </div>
+                                        </div>
+                                    </li> -->
+                                <!-- </ul> -->
+                                <a href="#" class="header__cart-view-cart btn btn--primary">Xem giỏ hàng</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </header>
+        <div class="app_container">
+            <div class="grid">
+                <div class="grid__row app_content">
+                    <div class="grid__column-12">
+                        <div class="cart-path">
+                            <h3 class="cart-path-cart">LỊCH SỬ MUA HÀNG</h3>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="grid__row cart_wrap">
+                    <div class="grid__column-12">
+                        <!-- <ul class="cart_content">
+                            <li class="cart_content-child">
+                                <img src="https://salt.tikicdn.com/cache/200x200/ts/product/f8/89/09/8cf82b1d215d342c01b9cb5c77567265.jpg"
+                                    alt="photo" class="cart_content__img">
+                                <div class="cart_content__info">
+                                    <a href="#" class="cart_content__heading">Laptop Asus Vivobook A512DA-EJ422T AMD
+                                        R5-3500U/Win10 (15.6 FHD) - Hàng Chính Hãng</a>
+                                    <span class="cart_content__seller">Cung cấp bởi
+                                        <a href="#">Nhãn hàng Asus</a>
+                                    </span>
+                                    <div class="cart_content__actions">
+                                        <span class="cart_content__del">Xóa</span>
+                                        <span class="cart_content__buylater">Để dành mua sau</span>
+                                    </div>
+                                </div>
+                                <div class="cart_content__details">
+                                    <div class="cart_content__price">
+                                        <span class="cart_content__price--current">13.179.000đ</span>
+                                        <span class="cart-content__discount-prices">
+                                            <span class="cart_content__price--old">15.990.000đ</span>
+                                            <span class="cart_content__discout--percent">-18%</span>
+                                        </span>
+                                    </div>
+                                    <div class="cart_content__quanity">
+                                        <button class="cart_content__quanity-btn">
+                                            <i class="cart_content__quanity-icon fas fa-minus"></i>
+                                        </button>
+                                        <form action="#">
+                                            <input class="cart_content__quanity-input" type="text" value="1">
+                                        </form>
+                                        <button class="cart_content__quanity-btn">
+                                            <i class="cart_content__quanity-icon fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li class="cart_content-child">
+                                <img src="https://salt.tikicdn.com/cache/200x200/ts/product/f8/89/09/8cf82b1d215d342c01b9cb5c77567265.jpg"
+                                    alt="photo" class="cart_content__img">
+                                <div class="cart_content__info">
+                                    <a href="#" class="cart_content__heading">Laptop Asus Vivobook A512DA-EJ422T AMD
+                                        R5-3500U/Win10 (15.6 FHD) - Hàng Chính Hãng</a>
+                                    <span class="cart_content__seller">Cung cấp bởi
+                                        <a href="#">Nhãn hàng Asus</a>
+                                    </span>
+                                    <div class="cart_content__actions">
+                                        <span class="cart_content__del">Xóa</span>
+                                        <span class="cart_content__buylater">Để dành mua sau</span>
+                                    </div>
+                                </div>
+                                <div class="cart_content__details">
+                                    <div class="cart_content__price">
+                                        <span class="cart_content__price--current">13.179.000đ</span>
+                                        <span class="cart-content__discount-prices">
+                                            <span class="cart_content__price--old">15.990.000đ</span>
+                                            <span class="cart_content__discout--percent">-18%</span>
+                                        </span>
+                                    </div>
+                                    <div class="cart_content__quanity">
+                                        <button class="cart_content__quanity-btn">
+                                            <i class="cart_content__quanity-icon fas fa-minus"></i>
+                                        </button>
+                                        <form action="#">
+                                            <input class="cart_content__quanity-input" type="text" value="2">
+                                        </form>
+                                        <button class="cart_content__quanity-btn">
+                                            <i class="cart_content__quanity-icon fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li class="cart_content-child">
+                                <img src="https://salt.tikicdn.com/cache/200x200/ts/product/f8/89/09/8cf82b1d215d342c01b9cb5c77567265.jpg"
+                                    alt="photo" class="cart_content__img">
+                                <div class="cart_content__info">
+                                    <a href="#" class="cart_content__heading">Laptop Asus Vivobook A512DA-EJ422T AMD
+                                        R5-3500U/Win10 (15.6 FHD) - Hàng Chính Hãng</a>
+                                    <span class="cart_content__seller">Cung cấp bởi
+                                        <a href="#">Nhãn hàng Asus</a>
+                                    </span>
+                                    <div class="cart_content__actions">
+                                        <span class="cart_content__del">Xóa</span>
+                                        <span class="cart_content__buylater">Để dành mua sau</span>
+                                    </div>
+                                </div>
+                                <div class="cart_content__details">
+                                    <div class="cart_content__price">
+                                        <span class="cart_content__price--current">13.179.000đ</span>
+                                        <span class="cart-content__discount-prices">
+                                            <span class="cart_content__price--old">15.990.000đ</span>
+                                            <span class="cart_content__discout--percent">-18%</span>
+                                        </span>
+                                    </div>
+                                    <div class="cart_content__quanity">
+                                        <button class="cart_content__quanity-btn">
+                                            <i class="cart_content__quanity-icon fas fa-minus"></i>
+                                        </button>
+                                        <form action="#">
+                                            <input class="cart_content__quanity-input" type="text" value="1">
+                                        </form>
+                                        <button class="cart_content__quanity-btn">
+                                            <i class="cart_content__quanity-icon fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </li>
+                        </ul> -->
+                        <table class="table table-hover table-donhang">
+                            <thead>
+                              <tr class="table-danger">
+                                <th scope="col">Mã đơn</th>
+                                <th scope="col">Ngày đặt hàng</th>
+                                <th scope="col">Ngày giao hàng</th>
+                                <th scope="col">Ngày nhận hàng</th>
+                                <th scope="col">Trạng thái</th>
+                                <th scope="col">Người nhận</th>
+                                <th scope="col">Số điện thoại</th>
+                                <th scope="col">Địa chỉ nhận</th>
+                                <th scope="col">Thành tiền</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <!-- <tr>
+                                <th scope="row">DH 01</th>
+                                <td>01/04/2020</td>
+                                <td>02/04/2020</td>
+                                <td>05/04/2020</td>
+                                <td>Hoàn tất</td>
+                                <td>Lê Anh Lâm</td>
+                                <td>0393347568</td>
+                                <td>08 Hà Văn Tín, tp Đà Nẵng</td>
+                                <td>100.000.000đ</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">DH 02</th>
+                                <td>02/05/2020</td>
+                                <td>04/05/2020</td>
+                                <td>08/05/2020</td>
+                                <td>Hoàn tất</td>
+                                <td>Lê Anh Lâm</td>
+                                <td>0393347568</td>
+                                <td>08 Hà Văn Tín, tp Đà Nẵng</td>
+                                <td>100.000.000đ</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">DH 03</th>
+                                <td>03/06/2020</td>
+                                <td>05/06/2020</td>
+                                <td>08/06/2020</td>
+                                <td>Hoàn tất</td>
+                                <td>Lê Anh Lâm</td>
+                                <td>0393347568</td>
+                                <td>08 Hà Văn Tín, tp Đà Nẵng</td>
+                                <td>100.000.000đ</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">DH 03</th>
+                                <td>03/06/2020</td>
+                                <td>05/06/2020</td>
+                                <td>08/06/2020</td>
+                                <td>Hoàn tất</td>
+                                <td>Lê Anh Lâm</td>
+                                <td>0393347568</td>
+                                <td>08 Hà Văn Tín, tp Đà Nẵng</td>
+                                <td>100.000.000đ</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">DH 03</th>
+                                <td>03/06/2020</td>
+                                <td>05/06/2020</td>
+                                <td>08/06/2020</td>
+                                <td>Hoàn tất</td>
+                                <td>Lê Anh Lâm</td>
+                                <td>0393347568</td>
+                                <td>08 Hà Văn Tín, tp Đà Nẵng</td>
+                                <td>100.000.000đ</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">DH 03</th>
+                                <td>03/06/2020</td>
+                                <td>05/06/2020</td>
+                                <td>08/06/2020</td>
+                                <td>Hoàn tất</td>
+                                <td>Lê Anh Lâm</td>
+                                <td>0393347568</td>
+                                <td>08 Hà Văn Tín, tp Đà Nẵng</td>
+                                <td>100.000.000đ</td>
+                              </tr> -->
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">Chăm sóc khách hàng</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link footer-item__link--none">Trung tâm trợ giúp</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link footer-item__link--none">YourLap Mail</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link footer-item__link--none">Hướng dẫn mua hàng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">Giới thiệu</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link footer-item__link--none">Giới thiệu</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link footer-item__link--none">Tuyển dụng</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link footer-item__link--none">Điều khoản dịch vụ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">Lời cảm ơn</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link footer-item__link--none">Cảm ơn đã sử dụng dịch vụ của chúng tôi</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link footer-item__link--none">Cảm ơn đã đánh giá tốt</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link footer-item__link--none">Cảm ơn vì đã tin tưởng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">Theo dõi chúng tôi</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link footer-item__link--none">
+                                    <i class="footer-item__icon fab fa-facebook"></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link footer-item__link--none">
+                                    <i class="footer-item__icon fab fa-instagram"></i>
+                                    Instagram
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link footer-item__link--none">
+                                    <i class="footer-item__icon fab fa-linkedin"></i>
+                                    Linkedin
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
+                        <div class="footer__download">
+                            <img src="assets/img/qr_code.png" alt="Download QR" class="footer__download-qr">
+                            <div class="footer__download-apps">
+                                <a href="#" class="footer__download-apps-link">
+                                    <img src="./assets/img/google_play.png" alt="Google play"
+                                        class="footer__download-apps-img">
+                                </a>
+                                <a href="#" class="footer__download-apps-link">
+                                    <img src="./assets/img/app_store.png" alt="App store"
+                                        class="footer__download-apps-img">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer__bottom">
+                <div class="grid">
+                    <p class="footer__text">Đồ án CIDO CS 397 N : Duy Quang - Anh Lâm - Văn Thảo - Thái Bảo</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="./js/Homepage/handleDisplay.js"></script>
+    
+    <script src="./js/LoadCart.js"></script>
+    <script src="./js/Homepage/LoadUser.js"></script>
+    <script src="./js/OrderUser/LoadOrder.js"></script>
+</body>
+
+</html>

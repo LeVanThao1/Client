@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/submenu.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&family=Lato:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/25d5d42d76.js" crossorigin="anonymous"></script>
+     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
+    <link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600'
+        rel='stylesheet'>
+     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="navbar-YouLap"><a class="navbar-brand" href="#">YourLap</a></div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link headingbav" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link headingbav" href="#">Setting</a>
+              </li>
+               <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li> 
+            </ul> -->
+            <!-- <form class="form-inline my-2 my-lg-0 mr-5">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-danger my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+          </div> -->
+        <!--   <div class="ad mr-3">
+               <a class="dropdown-item" href="#"></a>     
+              <a href="#"></a>
+        -->
+          </div>
+
+        <div class="btn-group dropleft">                
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      <img src="https://img.icons8.com/officel/40/000000/businessman.png"/>
+                    <b class="caret"></b>
+                </a>
+              </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <button class="dropdown-item" type="button">Your Account</button>  
+                <button class="dropdown-item" type="button">Account Setting</button>              
+                <button class="dropdown-item" type="button">Log out</button>
+              </div>
+        </div>
+        </nav>
+        
+        <div class="main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <ul class="nav flex-column submenu2" >
+                            <li class="nav-item">                            
+                            <a class="nav-link active" href="admin.html">Trang chủ</a>
+                          </li>
+                          <li class="nav-item">                          
+                            <a class="nav-link active" href="new-feed.html"><div class="icon"></div>Bản tin</a>
+                          </li>
+                            <li class="nav-item">                          
+                            <a class="nav-link active" href="notification.html">  <div class="icon"></div>Thông báo</a>
+                          </li>
+                          <li class="nav-item">                       
+                            <a class="nav-link active" href="mes.html"> <div class="icon"></div>Khuyến mãi</a>
+                            <ul class="sub-menu">
+                                <li><a href="uploadPromtion.html">Thêm khuyến mãi</a></li>
+                                <li>
+                                    <a href="promotionType.html">Loại khuyến mãi</a>
+                                    <ul class="sub-menu uploadProtionType">
+                                        <li><a href="uploadPromotionType.html">Thêm loại khuyến mãi</a></li> 
+                                    </ul>
+                                </li>
+                                                              
+                              </ul>
+                        </li>
+                          <li class="nav-item submenu" >                        
+                            <a class="nav-link active" href="product.html"><div class="icon"></div>Quản lý sản phẩm</a>
+                            <ul class="sub-menu">
+                              <li><a href="uploadProduct.html">Thêm sản phẩm</a></li>
+                             
+                            </ul>
+                          </li>
+                          <li class="nav-item submenu">                        
+                            <a class="nav-link" href="user.html"><div class="icon"></div>Quản lý tài khoản</a>
+                            <ul class="sub-menu">
+                              <li><a href="uploadUser.html">Thêm tài khoản</a></li>
+                             
+                            </ul>
+                          </li>
+                          <li class="nav-item submenu">
+                            
+                            <a class="nav-link" href="order.html"><div class="icon"></div>Quản lý đơn hàng</a>
+                            <ul class="sub-menu">
+                              <li><a href="uploadOrder.html">Thêm đơn hàng</a></li>
+                              
+                            </ul>
+                          </li>
+                          </li>
+                          <li class="nav-item submenu">                       
+                            <a class="nav-link" href="typeProduct.html"> <div class="icon"></div>Loại sản phẩm</a>
+                            <ul class="sub-menu">
+                              <li><a href="uploadProductType.html">Thêm loại sản phẩm</a></li>
+                             
+                            </ul>
+                          </li>
+                          <li class="nav-item submenu">                       
+                            <a class="nav-link" href="producer.html"> <div class="icon"></div>Nhà sản xuất</a>
+                            <ul class="sub-menu">
+                              <li><a href="uploadProducer.html">Thêm NSX</a></li>
+                             
+                            </ul>
+                          </li>
+                          <li class="nav-item">                       
+                            <a class="nav-link" href="rate.html"> <div class="icon"></div>Đánh giá</a>
+                          </li>
+                          <li class="nav-item submenu">                       
+                            <a class="nav-link" href="charts.html"> <div class="icon"></div>Thống kê</a>
+                            <ul class="sub-menu">
+                              <li><a href="#">Theo tuần</a></li>
+                              <li><a href="#">Theo tháng</a></li>
+                              <li><a href="#">Theo quý</a></li>
+                              <li><a href="#">Theo năm</a></li>
+                            </ul>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="login.html" tabindex="-1" aria-disabled="false">Log out</a>
+                          </li>
+                        </ul>
+                      </div>
+                       <div class="col-9">
+                          <div class="content content-t">
+                            <div class="module message">
+                              
+                              <div class="main-header">
+                                <h5>Loại khuyến mãi</h5>
+                              </div>
+                              <div class="child-header">
+                                <div class="dropdown">
+                                    <!-- <div class="pull-right">
+                                        <a href="#" class="btn btn-primary">Gửi</a>
+                                    </div> -->
+                                    <select name="dropownSort" id="dropdownSort">
+                                        <option value="">Mã KM a-z</option>
+                                        <option value="">Mã KM z-a </option>
+                                        <option value="">Tên KM a-z</option>
+                                        <option value="">Tên KM z-a</option>
+                                       
+                                      </select>
+                                    <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                      <button class="dropdown-item" type="button">Hộp thư đến</button>
+                                      <button class="dropdown-item" type="button">Thư đã gửi</button>
+                                      <button class="dropdown-item" type="button">Thư nháp</button>
+                                      <button class="dropdown-item" type="button">Thùng rác</button>
+                                      <button class="dropdown-item" type="button">Cài đặt</button>
+                                    </div> -->
+                                  </div>
+                                  <!-- <div class="pull-right">
+                                    <a href="promotionType.html" class="btn btn-primary">Loại KM</a>
+                                </div> -->
+                                  <div class="pull-center">
+                                    <a href="uploadPromotionType.html" class="btn btn-primary">Thêm</a>
+                                    </div>
+                                  
+                              </div>
+
+                              <!-- List sender -->
+                              <div class="module-body table">
+                                    <table class="table table-message">
+                                        <tbody>
+                                            <tr class="heading">
+                                                
+                                                <td class="cell-icon">
+                                                </td>
+                                                <td class="cell-author hidden-phone hidden-tablet">
+                                                    Mã loại khuyến mãi
+                                                </td>
+                                                <td class="cell-title">
+                                                    Tên loại khuyến mãi
+                                                </td>
+                                                <!-- <td class="cell-icon hidden-phone hidden-tablet">
+                                                    Tình trạng
+                                                </td>
+                                                <td class="cell-time align-right">
+                                                    Ngày gửi
+                                                </td> -->
+                                                <td>
+
+                                                </td>
+                                                <td>
+
+                                                </td>
+                                            </tr>
+                                            <tr class="unread" >
+                                                <!-- <td class="cell-check">
+                                                    <input type="checkbox" class="inbox-checkbox">
+                                                    </td> -->
+                                                    <td class="cell-icon">
+                                                        <i class="icon-star"></i>
+                                                    </td>
+                                                    <td class="cell-author hidden-phone hidden-tablet">
+                                                        John Wick
+                                                    </td>
+                                                    <td class="cell-title">
+                                                        Play with a dog
+                                                    </td>
+                                                    <!-- <td class="cell-icon hidden-phone hidden-tablet">
+                                                       Đã gửi
+                                                    </td>
+                                                    <td class="cell-time align-right">
+                                                        10/10/2020 18:24
+                                                    </td> -->
+                                                    <td>
+                                                        <div class="pull-right">
+                                                            <a href="mesDetails.html" class="btn btn-primary">Sửa</a>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="pull-right">
+                                                            <a href="#" class="btn btn-primary">Xoá</a>
+                                                        </div>
+                                                    </td>
+                                            </tr>
+                                            <tr class="unread starred">
+                                                <!-- <td class="cell-check">
+                                                    <input type="checkbox" class="inbox-checkbox">
+                                                </td> -->
+                                                <td class="cell-icon">
+                                                    <i class="icon-star"></i>
+                                                </td>
+                                                <td class="cell-author hidden-phone hidden-tablet">
+                                                    John Wick
+                                                </td>
+                                                <td class="cell-title">
+                                                    Play with a dog
+                                                </td>
+                                                <!-- <td class="cell-icon hidden-phone hidden-tablet">
+                                                    Đã gửi
+                                                </td>
+                                                <td class="cell-time align-right">
+                                                    10/10/2020 18:24
+                                                </td> -->
+                                                <td>
+                                                    <div class="pull-right">
+                                                        <a href="mesDetails.html" class="btn btn-primary">Sửa</a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="pull-right">
+                                                        <a href="#" class="btn btn-primary">Xoá</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="unread">
+                                                <!-- <td class="cell-check">
+                                                    <input type="checkbox" class="inbox-checkbox">
+                                                </td> -->
+                                                <td class="cell-icon">
+                                                    <i class="icon-star"></i>
+                                                </td>
+                                                <td class="cell-author hidden-phone hidden-tablet">
+                                                    John Wick
+                                                </td>
+                                                <td class="cell-title">
+                                                    Play with a dog
+                                                </td>
+                                                <!-- <td class="cell-icon hidden-phone hidden-tablet">
+                                                    Chưa gửi
+                                                </td>
+                                                <td class="cell-time align-right">
+                                                    10/10/2020 18:24
+                                                </td> -->
+                                                <td>
+                                                    <div class="pull-right">
+                                                        <a href="mesDetails.html" class="btn btn-primary">Sửa</a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="pull-right">
+                                                        <a href="#" class="btn btn-primary">Xoá</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="unread">
+                                                <!-- <td class="cell-check">
+                                                    <input type="checkbox" class="inbox-checkbox">
+                                                </td> -->
+                                                <td class="cell-icon">
+                                                    <i class="icon-star"></i>
+                                                </td>
+                                                <td class="cell-author hidden-phone hidden-tablet">
+                                                    Jhon
+                                                </td>
+                                                <td class="cell-title">
+                                                    Play with a dog
+                                                </td>
+                                                <!-- <td class="cell-icon hidden-phone hidden-tablet">
+                                                    Đã gửi
+                                                </td>
+                                                <td class="cell-time align-right">
+                                                    10/10/2020 18:24
+                                                </td> -->
+                                                <td>
+                                                    <div class="pull-right">
+                                                        <a href="mesDetails.html" class="btn btn-primary">Sửa</a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="pull-right">
+                                                        <a href="#" class="btn btn-primary">Xoá</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="unread">
+                                                <!-- <td class="cell-check">
+                                                    <input type="checkbox" class="inbox-checkbox">
+                                                </td> -->
+                                                <td class="cell-icon">
+                                                    <i class="icon-star"></i>
+                                                </td>
+                                                <td class="cell-author hidden-phone hidden-tablet">
+                                                    John Wick
+                                                </td>
+                                                <td class="cell-title">
+                                                    Play with a dog
+                                                </td>
+                                                <!-- <td class="cell-icon hidden-phone hidden-tablet">
+                                                    Chưa gửi
+                                                </td>
+                                                <td class="cell-time align-right">
+                                                    10/10/2020 18:24
+                                                </td> -->
+                                                <td>
+                                                    <div class="pull-right">
+                                                        <a href="mesDetails.html" class="btn btn-primary">Sửa</a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="pull-right">
+                                                        <a href="#" class="btn btn-primary">Xoá</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="unread">
+                                                <!-- <td class="cell-check">
+                                                    <input type="checkbox" class="inbox-checkbox">
+                                                </td> -->
+                                                <td class="cell-icon">
+                                                    <i class="icon-star"></i>
+                                                </td>
+                                                <td class="cell-author hidden-phone hidden-tablet">
+                                                    John Wick
+                                                </td>
+                                                <td class="cell-title">
+                                                    Play with a dog
+                                                </td>
+                                                <!-- <td class="cell-icon hidden-phone hidden-tablet">
+                                                    Chưa gửi
+                                                </td>
+                                                <td class="cell-time align-right">
+                                                    10/10/2020 18:24
+                                                </td> -->
+                                                <td>
+                                                    <div class="pull-right">
+                                                        <a href="mesDetails.html" class="btn btn-primary">Sửa</a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="pull-right">
+                                                        <a href="#" class="btn btn-primary">Xoá</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="unread">
+                                                <!-- <td class="cell-check">
+                                                    <input type="checkbox" class="inbox-checkbox">
+                                                </td> -->
+                                                <td class="cell-icon">
+                                                    <i class="icon-star"></i>
+                                                </td>
+                                                <td class="cell-author hidden-phone hidden-tablet">
+                                                    John Wick
+                                                </td>
+                                                <td class="cell-title">
+                                                    Play with a dog
+                                                </td>
+                                                <!-- <td class="cell-icon hidden-phone hidden-tablet">
+                                                    Đã gửi
+                                                </td>
+                                                <td class="cell-time align-right">
+                                                    10/10/2020 18:24
+                                                </td> -->
+                                                <td>
+                                                    <div class="pull-right">
+                                                        <a href="mesDetails.html" class="btn btn-primary">Sửa</a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="pull-right">
+                                                        <a href="#" class="btn btn-primary">Xoá</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="unread">
+                                                <!-- <td class="cell-check">
+                                                    <input type="checkbox" class="inbox-checkbox">
+                                                </td> -->
+                                                <td class="cell-icon">
+                                                    <i class="icon-star"></i>
+                                                </td>
+                                                <td class="cell-author hidden-phone hidden-tablet">
+                                                    John Wick
+                                                </td>
+                                                <td class="cell-title">
+                                                    Play with a dog
+                                                </td>
+                                                <!-- <td class="cell-icon hidden-phone hidden-tablet">
+                                                    Chưa gửi
+                                                </td>
+                                                <td class="cell-time align-right">
+                                                    10/10/2020 18:24
+                                                </td> -->
+                                                <td>
+                                                    <div class="pull-right">
+                                                        <a href="mesDetails.html" class="btn btn-primary">Sửa</a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="pull-right">
+                                                        <a href="#" class="btn btn-primary">Xoá</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="unread starred">
+                                                <!-- <td class="cell-check">
+                                                    <input type="checkbox" class="inbox-checkbox">
+                                                </td> -->
+                                                <td class="cell-icon">
+                                                    <i class="icon-star"></i>
+                                                </td>
+                                                <td class="cell-author hidden-phone hidden-tablet">
+                                                    John Wick
+                                                </td>
+                                                <td class="cell-title">
+                                                    Play with a dog
+                                                </td>
+                                                <!-- <td class="cell-icon hidden-phone hidden-tablet">
+                                                    Đã gửi
+                                                </td>
+                                                <td class="cell-time align-right">
+                                                    10/10/2020 18:24
+                                                </td> -->
+                                                <td>
+                                                    <div class="pull-right">
+                                                        <a href="mesDetails.html" class="btn btn-primary">Sửa</a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="pull-right">
+                                                        <a href="#" class="btn btn-primary">Xoá</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="unread">
+                                                <!-- <td class="cell-check">
+                                                    <input type="checkbox" class="inbox-checkbox">
+                                                </td> -->
+                                                <td class="cell-icon">
+                                                    <i class="icon-star"></i>
+                                                </td>
+                                                <td class="cell-author hidden-phone hidden-tablet">
+                                                    John Wick
+                                                </td>
+                                                <td class="cell-title">
+                                                    Play with a dog
+                                                </td>
+                                                <!-- <td class="cell-icon hidden-phone hidden-tablet">
+                                                    Đã gửi
+                                                </td>
+                                                <td class="cell-time align-right">
+                                                    10/10/2020 18:24
+                                                </td> -->
+                                                <td>
+                                                    <div class="pull-right">
+                                                        <a href="mesDetails.html" class="btn btn-primary">Sửa</a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="pull-right">
+                                                        <a href="#" class="btn btn-primary">Xoá</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="unread">
+                                                <!-- <td class="cell-check">
+                                                    <input type="checkbox" class="inbox-checkbox">
+                                                </td> -->
+                                                <td class="cell-icon">
+                                                    <i class="icon-star"></i>
+                                                </td>
+                                                <td class="cell-author hidden-phone hidden-tablet">
+                                                    John Wick
+                                                </td>
+                                                <td class="cell-title">
+                                                    Play with a dog
+                                                </td>
+                                                <!-- <td class="cell-icon hidden-phone hidden-tablet">
+                                                    Đã gửi
+                                                </td>
+                                                <td class="cell-time align-right">
+                                                    10/10/2020 18:24
+                                                </td> -->
+                                                <td>
+                                                    <div class="pull-right">
+                                                        <a href="mesDetails.html" class="btn btn-primary">Sửa</a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="pull-right">
+                                                        <a href="#" class="btn btn-primary">Xoá</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                           
+                                           
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                              <!-- List sender -->
+                              </div>
+
+                          </div>
+                          <!-- next- previous -->
+                              <div class="page-navigation">
+                                <nav aria-label="Page navigation example">
+                                  <ul class="pagination">
+                                    <li class="page-item">
+                                      <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                      </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                      <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </nav>
+                              </div>                            
+                              <!-- next- previous -->
+                        </div>
+            </div> 
+              </div>
+               
+              
+        </div>
+        
+    <div class="footer">
+        <p class="ft"><b>© 2020 Laptop - YourLap.com </b></p>
+        <p class="res">All rights reserved</p>
+    </div>
+        
+<!-- /////////////////////////////////         -->
+        <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+</body>
+   
+</html>
