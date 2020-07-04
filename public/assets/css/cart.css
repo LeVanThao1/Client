@@ -30,16 +30,18 @@
 
 .cart_content-child{
     
-    display: flex;
+    display: grid;
+    grid-template-columns: 200px 400px auto;
     padding: 5px;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     /* align-items: center; */
     margin: 12px 0;
 }
 
 .cart_content__img {
-    width: 150px;
+    width: 170px;
     object-fit: cover;
+    margin: 0 auto;
 }
 
 .cart_content__info {
