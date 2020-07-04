@@ -1,0 +1,9 @@
+{
+	"name": "Your Lap",
+    "short_name": "Your Lap",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#FFED2F",
+    "theme_color": "#ffe1c4",
+    "orientation": "portrait-primary",
+}
