@@ -16,7 +16,7 @@ async function loadCategory() {
         )
         $(`.ct-${ct._id}`).click(() => {
             localStorage.setItem('ct',`${ct._id}`);
-            redirect('homepage.html')
+            redirect('')
             // loadProduct(`https://server-yourlap.herokuapp.com/api/v1/products/type/${ct._id}`)
             // loadPagination(`https://server-yourlap.herokuapp.com/api/v1/products/type/${ct._id}?`)
         })

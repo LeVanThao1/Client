@@ -23,7 +23,7 @@ async function loadPath() {
     const product = await getProduct();
     $('.home-path__list').append(`
         <li class="home-path__item">
-            <a href="https://your-lap.herokuapp.com/homepage.html?ct=${product.data.product.typeProduct._id}" class="home-path__link">
+            <a href="https://your-lap.herokuapp.com?ct=${product.data.product.typeProduct._id}" class="home-path__link">
                 <i class="home-path__icon fas fa-angle-right"></i>${product.data.product.typeProduct.name}
             </a>
         </li>

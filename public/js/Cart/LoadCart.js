@@ -27,7 +27,7 @@ async function loadCartProduct2(pd) {
         <div class="cart_content__info">
             <a href="https://your-lap.herokuapp.com/chitiet.html?id=${pd.productId}" class="cart_content__heading">${pd.name}</a>
             <span class="cart_content__seller">Cung cấp bởi
-                <a href="https://your-lap.herokuapp.com/homepage.html?ct=${pd.typeProduct}">${pd.NSX}</a>
+                <a href="https://your-lap.herokuapp.com/?ct=${pd.typeProduct}">${pd.NSX}</a>
             </span>
             <div class="cart_content__actions">
                 <span class="cart_content__del del-${pd.productId}">Xóa</span>

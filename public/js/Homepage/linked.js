@@ -11,7 +11,7 @@ $(document).ready(function(){
         redirect('notification.html')
     })
     $('.logo').click(() => {
-        redirect('homepage.html')
+        redirect('')
     })
     $('.header__cart-view-cart').click(() => {
         redirect('cart.html')
