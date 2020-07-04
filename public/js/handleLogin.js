@@ -41,7 +41,7 @@ async function login(email , password) {
 			localStorage.setItem('username', username);
 			// localStorage.setItem('cartId', cart);
 			console.log(token, userId, username )
-			return redirect(path? path: '');
+			return redirect(path? path: '/');
 		}
 		else {
 			$('#err').html('Tài khoản hoặc mật khẩu không đúng');
