@@ -5,7 +5,7 @@ function checkLoginState() {
         // alert('Login FB successfully.');
         const accessToken = response.authResponse.accessToken;
         console.log(accessToken)
-        const resultLogin = await axios.post('http://localhost:3001/api/v1/loginFB', {
+        const resultLogin = await axios.post('https://server-yourlap.herokuapp.com/api/v1/loginFB', {
             accessToken
         });
         console.log(resultLogin);
