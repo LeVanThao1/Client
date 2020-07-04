@@ -1,7 +1,7 @@
 {
 	"name": "Your Lap",
     "short_name": "Your Lap",
-    "start_url": "/index.html",
+    "start_url": "public/index.html",
     "display": "standalone",
     "background_color": "#FFED2F",
     "theme_color": "#ffe1c4",
