@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetify Email</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/loginandregister.css">
+    <link rel="stylesheet" href="./assets/css/vetifyEmail.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/until.js"></script>
+    <!-- <script>
+        async function checkToken() {
+            const token = localStorage.getItem('token')
+            const reponse = await axios.get(`http://localhost:3001/api/v1/auth?token=${token}`);
+            if(!reponse.data.user) {
+                redirect('loginandregiter.html')
+            }
+            console.log(reponse)
+        }
+    </script> -->
+</head>
+
+<body>
+    <!-- BEM - block elements modifier -->
+    <div class="modal">
+        <div class="modal__overlay">
+
+        </div>
+
+        <div class="modal__body">
+                <!-- Register form -->
+
+            <!-- Login form  Đây là phần cho nút đăng nhập ------------------------------->
+            <div class="auth-form" id="login">
+                <div class="auth-form__container">
+
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Forgot password</h3>
+                    </div>
+                    <div style="color: green; font-size: 16px;" id="succ"></div>
+                    <div style="color: red; font-size: 16px;" id="err"></div>
+                    <!-- <form class="auth-form__form" id="form1"> -->
+                        <div class="auth-form__group">
+                            <input type="email" name="login_email" id="email" class="auth-form__input" placeholder="Nhập email của bạn" required>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                            <button  id="send" class="btn btn--primary auth-form__controls-back sendma" >Nhận mã</button>
+                            <input type="text" name="vetify_email" id="vetify" class="auth-form__input" maxlength="6" placeholder="Nhập mã xác nhận từ email" required>
+                            
+                            <!-- <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small> -->
+                        </div>
+                        <div class="auth-form__controls">
+                            <button id="verify" class="btn btn--primary auth-form__controls-back verify">XÁC NHẬN</button>
+                        </div>
+                    <!-- </form> -->
+
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
+    <!-- <script src="./js/handleLogin.js"></script> -->
+    <!-- <script src="./js/Register/verifyEmail.js"></script> -->
+    <script src="./js/forgotPassWord/handleForgot.js"></script>
+    <script type="text/javascript" src="js/facebook-sdk.js"></script>
+    <!-- <script src="./js/until.js"></script> -->
+    <script >
+        // $('.auth-form__controls-back').click(() => {
+        //     const 
+        // })
+    </script>
+</body>
+
+</html>

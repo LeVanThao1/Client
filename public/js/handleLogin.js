@@ -9,7 +9,7 @@ $('.Login').click(function () {
 	login($('#email').val().trim(), $('#password').val().trim());
 });
 $('.auth-form__help-forgot').click(function () {
-	redirect('vetifyEmail.html');
+	redirect('forgotPW.html');
 });
 $('.btn auth-form__controls-back').click(function () {
 	redirect('');

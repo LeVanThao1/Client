@@ -16,7 +16,7 @@ function checkLoginState() {
             localStorage.setItem('token', token);
 			localStorage.setItem('userId', userId);
             localStorage.setItem('username', username);
-            window.location = "https://61637942db13.ngrok.io/homepage.html";
+            window.location = "https://your-lap.herokuapp.com/homepage.html";
         }
         else
             alert("Login not successfully");
