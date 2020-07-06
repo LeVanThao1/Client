@@ -80,6 +80,7 @@ async function loadCart() {
             redirect('cart.html')
         })
     $('.fa-shopping-cart').click(() => {
+        const userId = localStorage.getItem('userId');
         if(userId) {
             redirect('cart.html')
         }else {
