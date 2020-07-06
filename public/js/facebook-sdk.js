@@ -16,7 +16,7 @@ function checkLoginState() {
             localStorage.setItem('token', token);
 			localStorage.setItem('userId', userId);
             localStorage.setItem('username', username);
-            window.location = "https://your-lap.herokuapp.com/homepage.html";
+            window.location = "https://your-lap.herokuapp.com";
         }
         else
             alert("Login not successfully");
