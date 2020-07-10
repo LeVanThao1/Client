@@ -83,9 +83,9 @@ async function loadCart() {
         const userId = localStorage.getItem('userId');
         console.log(userId)
         if(userId) {
-            redirect('1')
+            console.log('1')
         }else {
-            redirect('2')
+            console.log('2')
         }
     })
     console.log(getCart);
