@@ -79,15 +79,15 @@ async function loadCart() {
         $('.header__cart-view-cart').click(() => {
             redirect('cart.html')
         })
-    $('.fa-shopping-cart').click(() => {
-        const userId = localStorage.getItem('userId');
-        console.log(userId)
-        if(userId) {
-            console.log('1')
-        }else {
-            console.log('2')
-        }
-    })
+    // $('.fa-shopping-cart').click(() => {
+    //     const userId = localStorage.getItem('userId');
+    //     console.log(userId)
+    //     if(userId) {
+    //         console.log('1')
+    //     }else {
+    //         console.log('2')
+    //     }
+    // })
     console.log(getCart);
     const a = getCart.map((pd,cb) => {
         console.log(pd)

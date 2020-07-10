@@ -1,12 +1,12 @@
 $(document).ready(function(){
    
-    // $('.header__cart-icon').click(() => {
-    //     const userId = localStorage.getItem('userId');
-    //     const token = localStorage.getItem('token');
-    //     if(userId && token)
-    //         redirect('cart.html');
-    //     redirect('loginUser.html')
-    // })
+    $('.header__cart-icon').click(() => {
+        const userId = localStorage.getItem('userId');
+        const token = localStorage.getItem('token');
+        if(userId && token)
+            return redirect('cart.html');
+        return redirect('loginUser.html')
+    })
     $('.fa-bell').click(()=> {
         redirect('notification.html')
     })
