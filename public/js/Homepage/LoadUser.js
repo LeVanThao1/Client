@@ -46,7 +46,7 @@ async function loadUser() {
                         <a href="#">Địa chỉ của tôi</a>
                     </li>
                     <li class="header__navbar-user-item">
-                        <a href="http://localhost:3000/donhangOfOneUser.html">Đơn mua</a>
+                        <a href="https://your-lap.herokuapp.com/donhangOfOneUser.html">Đơn mua</a>
                     </li>
                     <li class="header__navbar-user-item header__navbar-user-item--separate">
                         <a href="#">Đăng xuất</a>
