@@ -36,9 +36,9 @@ async function loadCartProduct2(pd) {
         </div>
         <div class="cart_content__details">
             <div class="cart_content__price">
-                <span class="cart_content__price--current">${formatMoney(pd.price)}</span>
+                <span class="cart_content__price--current">${formatMoney(pd.price * 110 / 100)}</span>
                 <span class="cart-content__discount-prices">
-                    <span class="cart_content__price--old">${formatMoney(pd.price * 110 / 100)}</span>
+                    <span class="cart_content__price--old">${formatMoney(pd.price)}</span>
                     <span class="cart_content__discout--percent">-10%</span>
                 </span>
             </div>

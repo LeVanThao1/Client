@@ -44,8 +44,8 @@ async function loadProduct() {
         <div class="info-product">
         <h3 class="info-product__heading">${product.data.product.name}</h3>
         <div class="home-product-item__price info-product__price">
-            <span class="home-product-item__price-old info-product__price--old">${formatMoney(moneyAfterDiscount(product.data.product.price,10))}</span>
-            <span class="home-product-item__price-current info-product__price--current">${formatMoney(product.data.product.price)}</span>
+            <span class="home-product-item__price-old info-product__price--old">${formatMoney(product.data.product.price)}</span>
+            <span class="home-product-item__price-current info-product__price--current">${formatMoney(moneyAfterDiscount(product.data.product.price,0.1))}</span>
         </div>
         <div class="info-product__summary">
             <span class="item">

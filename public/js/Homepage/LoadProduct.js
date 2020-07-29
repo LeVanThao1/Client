@@ -26,7 +26,7 @@ async function loadProduct(url="https://server-yourlap.herokuapp.com/api/v1/prod
                 <h4 class="home-product-item__name">${pr.name}</h4>
                 <div class="home-product-item__price">
                     <span class="home-product-item__price-old">${formatMoney(pr.price)}</span>
-                    <span class="home-product-item__price-current">${formatMoney(moneyAfterDiscount(pr.price,10))}</span>
+                    <span class="home-product-item__price-current">${formatMoney(moneyAfterDiscount(pr.price,0.1))}</span>
                 </div>
                 </a>
                 
