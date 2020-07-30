@@ -37,7 +37,7 @@ function checkInputsRegister(){
         setSuccessFor(user_mail);
     }
     if(user_fullname === ''){
-        setErrorFor(user_mail,'Fullname không được để trống');
+        setErrorFor(user_name,'Fullname không được để trống');
         error = true;
     }else{
         setSuccessFor(user_name);
