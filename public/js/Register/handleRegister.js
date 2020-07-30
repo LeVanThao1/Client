@@ -1,7 +1,7 @@
 // $(document).ready(() => {
 //     register();
 // })
-const user_mail = document.getElementById('user_mail');
+// const user_mail = document.getElementById('user_mail');
 async function register() {
     const email = $('input[name="user_email"]').val();
     const password = $('input[name="user_password"]').val();
