@@ -58,7 +58,9 @@ async function loadCart() {
     else {
         const getCart = cart.data.cart.cart;
     console.log(cart);
-    length = getCart.length;
+    length = getCart.reduce((a,b) => {
+        a+ +b.amount
+    }, 0);
     if(length === 0) {
         $('.header__cart-list').html(
         `<img src="../assets/img/noCart.png" alt="No-cart" class="header__cart-no-cart-img">
