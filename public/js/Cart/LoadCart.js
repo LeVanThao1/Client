@@ -36,9 +36,9 @@ async function loadCartProduct2(pd) {
         </div>
         <div class="cart_content__details">
             <div class="cart_content__price">
-                <span class="cart_content__price--current">${formatMoney(pd.price * 110 / 100)}</span>
+                <span class="cart_content__price--current">${formatMoney(pd.price)}</span>
                 <span class="cart-content__discount-prices">
-                    <span class="cart_content__price--old">${formatMoney(pd.price)}</span>
+                    <span class="cart_content__price--old">${formatMoney(pd.price * 110 / 100)}</span>
                     <span class="cart_content__discout--percent">-10%</span>
                 </span>
             </div>
@@ -56,7 +56,7 @@ async function loadCartProduct2(pd) {
         </div>
     </li>
         `)
-    total += Math.ceil(pd.price * (100 - 10) / 100) * pd.amount;
+    total += Math.ceil(pd.price) * pd.amount;
     loadTotal(total);
     $(`.increase-${pd.productId}`).click(() => {
         if(+$(`.quantity-${pd.productId}`) >= pd.amountProduct) {
