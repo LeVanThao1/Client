@@ -2,6 +2,7 @@ const registerForm = document.getElementById('form1');
 const loginForm = document.getElementById('form1');
 const user_mail = document.getElementById('user_mail');
 const user_pass = document.getElementById('user_pass');
+const user_name = document.getElementById('fullname');
 const user_confirmpass = document.getElementById('user_confirmpass');
 const login_email = document.getElementById('email');
 const login_pass = document.getElementById('password');
@@ -25,7 +26,7 @@ function checkInputsRegister(){
     const user_mailValue = user_mail.value.trim();
     const user_passValue = user_pass.value.trim();
     const user_confirmpassValue = user_confirmpass.value.trim();
-
+    const user_fullname = user_name.value.trim();
     if(user_mailValue === ''){
         setErrorFor(user_mail,'Email không được để trống');
         error = true;
@@ -34,6 +35,12 @@ function checkInputsRegister(){
         error = true;
     }else{
         setSuccessFor(user_mail);
+    }
+    if(user_fullname === ''){
+        setErrorFor(user_mail,'Fullname không được để trống');
+        error = true;
+    }else{
+        setSuccessFor(user_name);
     }
 
     if(user_passValue === ''){
