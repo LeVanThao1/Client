@@ -58,6 +58,7 @@ async function loadCart() {
     else {
         const getCart = cart.data.cart.cart;
     console.log(cart);
+    length = 0;
     for(let i = 0; i < getCart.length; i++) {
         length += getCart[i].amount;
     }
