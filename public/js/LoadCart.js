@@ -37,7 +37,7 @@ async function loadCart2(pd) {
                     userId: userId,
                     productId: pd.productId
             }).then((res) => {
-                length--;
+                length -= pd.amount;
                 $(`.id-${pd.productId}`).remove();
                 $('.header__cart-notice').html(`${length}`)
                 // loadCart()
