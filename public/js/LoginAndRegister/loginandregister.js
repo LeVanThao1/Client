@@ -8,15 +8,15 @@ const login_pass = document.getElementById('password');
 
 
 // Validate registerForm
-$('#form1').('submit',function(e){
+$('.dk').click(function(e){
     e.preventDefault();
     checkInputsRegister();
 });
 
-$('#form2')('submit',function(e){
-    e.preventDefault();
-    checkInputsLogin();
-});
+// $('#form2')('submit',function(e){
+//     e.preventDefault();
+//     checkInputsLogin();
+// });
 
 
 
