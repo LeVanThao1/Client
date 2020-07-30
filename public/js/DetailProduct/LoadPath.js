@@ -123,11 +123,11 @@ async function loadProduct() {
             if(response.status === 200) {
                 length++;
                 $('.header__cart-notice').html(`${length}`);
-                alert('them thanh cong');
+                // alert('them thanh cong');
                 loadCart();
             }
             else {
-                alert('them that bai');
+                // alert('them that bai');
             }
         })
         
@@ -140,7 +140,7 @@ async function loadProduct() {
     btnGiam.addEventListener('click',function(){
         let value = inputValue[0].value;
         value = +value;
-        if(value > 0)
+        if(value > 1)
             {
                 inputValue[0].value = value - 1;
             }

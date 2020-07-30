@@ -115,7 +115,7 @@ async function loadCartProduct2(pd) {
             $(`.child-${pd.productId}`).remove();
             total -= pd.amount * pd.price;
             loadTotal(total);
-            // loadCart();
+            loadCart();
         })
     })
     $(`.buylater-${pd.productId}`).click(() => {
