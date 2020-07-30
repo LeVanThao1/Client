@@ -58,9 +58,9 @@ async function loadCart() {
     else {
         const getCart = cart.data.cart.cart;
     console.log(cart);
-    length = getCart.reduce((a,b) => {
-        a+ b.amount
-    }, 0);
+    for(let i = 0; i < getCart.length; i++) {
+        length += getCart[i].amount;
+    }
     console.log(length)
     if(length === 0) {
         $('.header__cart-list').html(
