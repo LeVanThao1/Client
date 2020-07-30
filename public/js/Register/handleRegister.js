@@ -1,7 +1,7 @@
 // $(document).ready(() => {
 //     register();
 // })
-
+const user_mail = document.getElementById('user_mail');
 async function register() {
     const email = $('input[name="user_email"]').val();
     const password = $('input[name="user_password"]').val();
@@ -17,6 +17,6 @@ async function register() {
         redirect('vetifyEmail.html');
     }
     else {
-        alert('email đã tồn tại, vui lòng đăng ký email khác');
+        setErrorFor(user_mail,'email đã tồn tại, vui lòng đăng ký email khác');
     }
 }
