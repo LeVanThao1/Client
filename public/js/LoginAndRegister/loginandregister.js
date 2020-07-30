@@ -1,5 +1,5 @@
 const registerForm = document.getElementById('form1');
-const loginForm = document.getElementById('form2');
+const loginForm = document.getElementById('form1');
 const user_mail = document.getElementById('user_mail');
 const user_pass = document.getElementById('user_pass');
 const user_confirmpass = document.getElementById('user_confirmpass');
@@ -8,12 +8,12 @@ const login_pass = document.getElementById('password');
 
 
 // Validate registerForm
-registerForm.addEventListener('submit',function(e){
+$('#form1').('submit',function(e){
     e.preventDefault();
     checkInputsRegister();
 });
 
-loginForm.addEventListener('submit',function(e){
+$('#form2')('submit',function(e){
     e.preventDefault();
     checkInputsLogin();
 });
