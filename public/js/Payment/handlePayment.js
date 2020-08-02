@@ -90,7 +90,7 @@ async function handlePayment() {
         const paymentAddress = {
             recipientName: name,
             recipientPhone: phone,
-            recipientAddress: ${city}, ${district}, ${warn}, ${street},
+            recipientAddress: `${city}, ${district}, ${warn}, ${street}`,
             products
         }
         axios.post(`https://server-yourlap.herokuapp.com/api/v1/order?token=${token}`, paymentAddress).then((res) => {
